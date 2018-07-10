@@ -1,0 +1,2156 @@
+<!doctype html>
+<html>
+
+<head>
+    <!--cmpp:start-->
+    <meta charset="utf-8">
+    
+        <!--empty here-->
+    
+    <script src="http://y0.ifengimg.com/base/jQuery/jquery-1.9.1.min.js"></script>
+    <script>var jq = jQuery.noConflict(); </script>
+    <!--requirejs and glue, base core for components-->
+    
+        <!--requirejs and glue, base core for components-->
+<script src="http://y0.ifengimg.com/fe/detail/scripts/base-core_5664eba4.min.js"></script>
+    
+    <script src="http://p0.ifengimg.com/a98b27eebe4deb98/2016/45/md5.js"></script>
+    <script src="http://p0.ifengimg.com/a/2018/0109/antiTheft.js"></script>
+    
+        <script src="http://y0.ifengimg.com/commonpage/1130/F-RequireJS.min.js"></script>
+<script>
+    var suffix = device.type === "pc" ? ".pc" : ".mobile";
+
+    requirejs.config({
+        paths: {
+            // åºç¡æ¨¡å
+            "F": "http://y0.ifengimg.com/base/origin/F-amd-1.2.0.min",
+            "FM":  "http://y0.ifengimg.com/commonpage/1130/F-amd-mobile-1.1.1.min",
+            "debug": "http://y0.ifengimg.com/commonpage/1130/F-amd-mobile-1.1.0.min",
+
+            // å¤´é¨
+            'keywords': 'http://m0.ifengimg.com/keywords',
+            "header": "http://y0.ifengimg.com/commonpage/1130/header.pc.min",
+            "search": "http://p0.ifengimg.com/commonpage/180330/header" + suffix,
+
+            // è½®æ­å¾
+            "ppt.pc": "http://p0.ifengimg.com/fe/zx2/scripts/ppt.pc_b844b957",
+            "ppt.mobile": "http://y0.ifengimg.com/commonpage/1205/ppt.mobile.min",
+
+            // è§é¢æ­æ¾å¨
+            "video.pc": "http://p0.ifengimg.com/fe/news_detail/scripts/video_9137fc10",
+            "video.mobile": "http://p1.ifengimg.com/a/2018/0118/news_mobile",
+
+            // è¯è®ºç¸å³
+            "comment.number": "http://p0.ifengimg.com/a/2016/1110/comment/comment_number_add1",
+            "recommend.comment_number": "http://p0.ifengimg.com/a/2016/1110/comment/comment_number_add1",
+            "comment.pc": "http://y0.ifengimg.com/a/2015/0530/comment.pc.v3.min",
+            "comment.mobile": "http://y0.ifengimg.com/commonpage/1216/v1/comment.mobile.min",
+
+
+            // tabåæ¢ æ¨è çäºè¿ç
+            "tabControl.pc": "http://y0.ifengimg.com/commonpage/1218/recommend.pc.min",
+            "recommend.pc": "http://y1.ifengimg.com/a/2015/0519/comment.pc.v2.0519.min",
+            "readAndRead": "http://y0.ifengimg.com/commonpage/1206/recommend" + suffix + ".min",
+
+            "survey.pc": "http://y0.ifengimg.com/commonpage/1203/survey.pc.min",
+
+            //pcç«¯åäº«(åå®¹åäº«ååè¯åäº«)
+            "share.pc": "http://y0.ifengimg.com/commonpage/2016/0125/utils.pc.min",
+            //ç§»å¨ç«¯åäº«(åå®¹åäº«)
+            "share.mobile": "http://y0.ifengimg.com/commonpage/2014/0612/utils.mobile.min",
+            //è¿åé¡¶é¨
+            "utils": "http://y0.ifengimg.com/commonpage/2016/0125/utils.pc.min",
+            //48å°æ¶ç¹å»æè¡æµ®å¨
+            "floatIt.pc" : "http://y0.ifengimg.com/commonpage/2016/0125/utils.pc.min",
+            "picLazy": "http://y0.ifengimg.com/commonpage/2016/0125/utils.pc.min",
+
+            // éç¨ç»å½
+            "public_login": "http://y1.ifengimg.com/commonpage/20151202/public_login.min",
+
+            "jquery#1.8.1" : "http://y1.ifengimg.com/fe/jQuery/jquery-1.8.1.min",
+            "getSurveyHtml":"http://p1.ifengimg.com/a/2016/0810/com-box-survey_8e15dcd7",
+            //ç¹èµ
+            "dianzan":"http://p0.ifengimg.com/fe/news_detail/scripts/dianzan_554f2bc4",
+            //pptçæ¨¡æ¿
+            "artTemplate#3.0.3" : "http://p0.ifengimg.com/fe/product_wzyh/scripts/template_b75f1e4e",
+            "product_wzyh#1.0.1/template":"http://p0.ifengimg.com/fe/product_wzyh/scripts/product_wzyh_template_9c201afd"
+        },
+        waitSeconds: 20,
+        shim: {}
+    });
+    tasker.runAfterDomReady();
+</script>
+    
+    <script>
+        if (device.type === "mobile") {
+            var nowUrl = window.location.href;
+            var num1 = nowUrl.split('//');
+            var num2 = num1[1].split('/');
+            var num3 = num2[3].split('_0');
+            var numArt = num3[0];
+            var hrefNew = 'http://isports.ifeng.com/' + numArt + '/news.shtml?srctag=pc2m';
+            window.open(hrefNew, '_self');
+        }
+    </script>
+    <title>æ¿èµæè¾ï¼åæ¥æ¬å¥³è¶³å½èå°äºè¿æ¥åç°é²å±è¡æ¿è¯º_å¤å°</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="2018å¹´7æ9æ¥ï¼æ®MSNè½¬è½½ãäº§ç»ä½è²æ¥ãæ¶æ¯ï¼åæ¥æ¬å¥³è¶³å½èä¸¸å±±æ¡éå¥äºæ¨æ¥åå TBSçµè§å°ãSunday Japanãèç®æ¶ï¼ç§°å°åç°åå&ldquo;æ¥æ¬éå°ç»èµæªä¸æå¨èï¼å°å¬å¼é²å±è¡è§é¢">
+    <meta name="og: webtype" content="news">
+    <meta property="og:url" content="http://2018.ifeng.com/a/20180709/59082220_0.shtml" />
+    <meta property="og:title" content="æ¿èµæè¾ï¼åæ¥æ¬å¥³è¶³å½èå°äºè¿æ¥åç°é²å±è¡æ¿è¯º" />
+    <meta property="og:description" content="2018å¹´7æ9æ¥ï¼æ®MSNè½¬è½½ãäº§ç»ä½è²æ¥ãæ¶æ¯ï¼åæ¥æ¬å¥³è¶³å½èä¸¸å±±æ¡éå¥äºæ¨æ¥åå TBSçµè§å°ãSunday Japanãèç®æ¶ï¼ç§°å°åç°åå&ldquo;æ¥æ¬éå°ç»èµæªä¸æå¨èï¼å°å¬å¼é²å±è¡è§é¢" />
+    <meta name="og:time" content="2018å¹´07æ09æ¥ 18:11:16"
+    />
+    <meta name="og:category " content="å¤å°" />
+    <meta property="og:image" content="http://p0.ifengimg.com/pmop/2018/0709/84EFBD91255E93B26B1710AE396FF5CDA9F335F8_size27_w569_h314.jpeg"
+    />
+    <meta name="og: img_slide" content="" />
+    <meta name="og: img_video" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <!-- è¿ééè¦ä¿®æ¹ï¼ç§»å¨ç«¯è·³è½¬è¯¦æé¡µ -->
+    <meta http-equiv="mobile-agent" content="format=html5;url=http://i.ifeng.com/ifengurl.f?vt=5&ch=rj_bd_me&url=http://2018.ifeng.com/a/20180709/59082220_0.shtml" />
+    <meta http-equiv="mobile-agent" content="format=xhtml;url=http://i.ifeng.com/ifengurl.f?vt=2&ch=rj_bd_me&url=http://2018.ifeng.com/a/20180709/59082220_0.shtml" />
+    <!-- è¿ééè¦ä¿®æ¹ï¼ç§»å¨ç«¯è·³è½¬è¯¦æé¡µ -->
+    
+        <script>
+        if (device.type === "mobile") {
+            document.write('<link rel="stylesheet" href="http://p0.ifengimg.com/a/2017/0210/46d8e7c9e67b115.css"/>');
+        } else if (device.type === "pad") {
+            document.write('<link rel="stylesheet" href="http://p0.ifengimg.com/fe/zx2/styles/ipadV3_c1e41b65.css"/>');
+        } else {
+            document.write('<link rel="stylesheet" href="http://p0.ifengimg.com/7495f702e2e05143/2018/9/8d9703308d826b5.css"/>');
+        }
+</script>
+    
+
+    <script>
+        // @TODO: å¨å±åæ°
+        define("detail", [], function () {
+            return {
+                "docName": "æ¿èµæè¾ï¼åæ¥æ¬å¥³è¶³å½èå°äºè¿æ¥åç°é²å±è¡æ¿è¯º",
+                "docUrl": "http://2018.ifeng.com/a/20180709/59082220_0.shtml",
+                "summary": '',
+                "skey": "d58f78",
+                "commentUrl": "sub_68410263",
+                // "commentUrl": "http://news.ifeng.com/a/20180608/58627881_0.shtml",
+                "image": "http://p0.ifengimg.com/pmop/2018/0709/84EFBD91255E93B26B1710AE396FF5CDA9F335F8_size27_w569_h314.jpeg",
+                "channelTitle": ""
+            };
+        });
+    </script>
+    <!--å¨ç«æ¸ éæ è®°ä¼ é-->
+    
+        <script>
+(function($) {
+    function getSign(localSearch,ret){
+        var localSearchArr = localSearch.split("#");
+            for(var i=0;i<localSearchArr.length;i++){
+                var localParam = localSearchArr[i];
+                if(localParam.indexOf("_")==-1)continue;
+                var localParamArr = localParam.split("?");
+                for(var j=0;j<localParamArr.length;j++){
+                    var localParam2 = localParamArr[j];
+                    if(localParam2.indexOf("_")==-1)continue;
+                    var localParam2Arr = localParam2.split("&");
+                    for(var m=0;m <localParam2Arr.length;m++){
+                        var localParam3 = localParam2Arr[m];
+                        if(localParam3.indexOf("_")==-1)continue;
+                        var localParam3Arr = localParam3.split("|");
+                        for(var k=0;k<localParam3Arr.length;k++){
+                            var localParam4 = localParam3Arr[k];
+                            if(localParam4.indexOf("_")!=0)continue;
+                            if(ret==''){
+                                ret+=localParam4;
+                            }else{
+                                ret = ret+"&"+localParam4;
+                            }
+                        }
+                    }
+                }
+            }    
+        return ret;
+    }
+
+    function getParam(localSearch ,localHash) {
+        var ret = '';
+        if(localSearch.indexOf("_zbs")>-1){
+            ret = getSign(localSearch,ret);
+        }
+        if(localHash.indexOf("_zbs")>-1){
+            ret = getSign(localHash,ret);
+        }
+        return ret;
+    }
+
+    //æç« é¡µçä»»æè·³è½¬
+    $(document).on("click", "a", function() {
+     var localHref = $(this).attr("sign-trs-href") || $(this).attr("href");
+     
+        if(localHref!="undefined" && localHref!=undefined && localHref!="" && localHref!="#" && localHref.indexOf("javascript:")==-1){
+        localHref = localHref.trim();
+            var localSearch = location.search;
+            var localHash = location.hash;
+            
+            $(this).attr("sign-trs-href",localHref);
+
+            var newUrl = '';
+            
+            var inWhitelist = false;
+            var whitelist = ['http://dol.deliver.ifeng.com/'];
+            for(var i = 0, len = whitelist.length; i < len; i++){
+                if(localHref.indexOf(whitelist[i]) > -1){
+                    inWhitelist = true;
+                }
+            }
+            // ä¼ éä¸åçº¿å¼å¤´çç»è®¡
+            var curSrc = getParam(localSearch ,localHash);
+            if ((localSearch || localHash) && curSrc && !inWhitelist) {
+                if (localHref.indexOf('?') > -1) {
+                    newUrl = localHref + '&' + curSrc;
+                } else {
+                    newUrl = localHref + '?' + curSrc;
+                }
+                $(this).attr("href",newUrl);
+            }
+        }
+    });
+
+})(jQuery);
+</script>
+    
+    <script>
+    if (device.type !== "pc") {
+        define('renderCommentCount', [], function () {
+            return function (num1, num2,num3) {
+                var doms = document.querySelectorAll(".js_commentCount");
+                if(!num3 == 0 && !num1 ){//å³é­è¯è®ºå¹¶å é¤è¯è®ºåå®¹
+                    for (var i = 0, iLen = doms.length; i < iLen; i++) {
+                        doms[i].hide()
+                    }
+                    return false;
+                }else{
+                    window["__commentCount"] = [num1, num2];
+                    for ( i = 0; i < iLen; i++) {
+                        doms[i].innerHTML = '<span class="ss_none"><em>' + num2 + '</em>äººåä¸</span><em>' +
+                            num1 + '</em><span class="ss_none">è¯è®º</span>';
+                    }
+                }
+            };
+        });
+
+        define("jumpToCommentView", ["detail"], function (detail) {
+
+            var skey = detail.skey ? '&skey=' + encodeURIComponent(detail.skey) : "";
+            var speUrl = detail.speUrl ? 'speUrl=' + encodeURIComponent(detail.speUrl) : "";
+            var url = 'http://gentie.ifeng.com/view.html';
+            url = url + "?docName=" + encodeURIComponent(detail.docName) +
+                '&docUrl=' + encodeURIComponent(detail.commentUrl) + skey + speUrl;
+            return function () {
+                window.open(url, "comment", "");
+            }
+        });
+
+        creatTasker("auto", ["FM", "detail", "renderCommentCount"], function (F, detail, renderCommentCount) {
+            var commentCountUrl = 'http://comment.ifeng.com/get.php';
+
+            if (typeof __commentCount !== "undefined") {
+                renderCommentCount(__commentCount[0], __commentCount[1]);
+            } else {
+                F.jsonp({
+                    url: commentCountUrl,
+                    data: {
+                        doc_url: detail.commentUrl,
+                        format:'js',
+                        job:1,
+                        callback:'callbackGetFastCommentCount'
+                    },
+                    cache:true,
+                    callback: "callbackGetFastCommentCount",
+                    success: function (cmtJson) {
+                        renderCommentCount(cmtJson.count, cmtJson.join_count,cmtJson.allow_comment);
+                    }
+                });
+            }
+        }, "next", "è·åè¯è®ºæ°");
+    } else {
+        creatTasker("auto", ["comment.number", "detail"], function (commentNumber, detail) {
+            var detailNew = {
+                "docName": detail.docName,
+                "docUrl": detail.commentUrl || detail.docUrl,
+                "skey":detail.skey,
+                "pcUrl":detail.docUrl
+            };
+            
+            commentNumber(detailNew);
+        }, "next", "å½åä½ç½®è·åè¯è®ºæ°");
+        // creatTasker("auto", ["recommend.comment_number"], function (commentNumber) {
+        //     commentNumber();
+        // }, "next", "æ¨èä½ç½®è·åè¯è®ºæ°");
+    }
+</script>
+
+    <!--cmpp:end-->
+    
+        <meta http-equiv="Cache-Control" content="no-transform " />
+<script src="//m1.ifengimg.com/ifeng/sources/inice_v1.js"></script>
+    
+    
+        <script src="//p0.ifengimg.com/a/2017/0324/fa.min.js"></script>
+    
+</head>
+
+<body>
+        <img src="http://p0.ifengimg.com/pmop/2018/0709/84EFBD91255E93B26B1710AE396FF5CDA9F335F8_size27_w569_h314.jpeg" style="width:0; height:0; display: block;">
+    <!--headeréè¦æ³¨éè¯¯å begin-->
+    <!-- è¿ééè¦ä¿®æ¹ï¼ä¸çæ¯åé¡µheader,å·²æ¿æ¢ä¸ºä¸çæ¯åé¡µheader /cmpp_17001/chip/s_worldcup_detail_header.html -->
+    <script src="http://y0.ifengimg.com/commonpage/1130/F-RequireJS.min.js"></script>
+    <link rel="stylesheet" href="http://p0.ifengimg.com/fe/zx2/styles/header_90cc09ce.css" />
+    <!--180202a begin-->
+    <!--180611a begin-->
+    <style>
+        /*ç»éå*/
+
+        .login {
+            padding-top: 21px;
+        }
+
+        .LoginAfter {
+            float: right;
+            margin-top: 6px;
+            width: 140px;
+            font-family: microsoft yahei;
+            font-size: 12px;
+        }
+
+        .LoginAfter a {
+            color: #333;
+        }
+
+        .LoginAfterName {
+            width: 125px;
+            display: block;
+        }
+
+        .LoginAfterName #theLogName {
+            float: left;
+            width: 85px;
+            text-align: right;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap
+        }
+
+        .LoginAfterName #logNameSpan {
+            color: #004276;
+            background: url(http://p0.ifengimg.com/a/2018/0611/icon_arrow.png) no-repeat 4px 2px;
+            padding: 5px 8px;
+            display: block;
+            float: left;
+
+        }
+
+        .LoginAfterName:hover {
+            color: #f54343;
+            text-decoration: none;
+        }
+
+        .LoginAfter a.logout {
+            color: #333;
+            background: none;
+            padding-left: 5px;
+            float: left;
+        }
+
+        .LoginAfter a.logout:hover {
+            color: #f54343;
+        }
+
+        .LoginAfter ul {
+            border: 1px solid #dedede;
+            position: absolute;
+            top: 38px;
+            right: 58px;
+            background: #fff;
+            padding: 0 12px;
+            z-index: 99;
+        }
+
+        /*180611*/
+
+        .LoginAfter ul li {
+            padding: 7px 0 10px;
+            background: red url(http://p1.ifengimg.com/ifeng/ifeng-index/20160122/spritesize47_w1000_h2000.png) no-repeat -500px -68px;
+
+        }
+
+        .LoginAfter ul li a:hover {
+            color: #f54343;
+            text-decoration: none;
+        }
+
+        .BgNone {
+            background: none !important;
+        }
+
+        #logName:hover {
+            color: #f54343;
+        }
+
+        .worldCupWrap {
+            background: url(http://p2.ifengimg.com/a/2018/0609/2a43130b4b9f5fasize20_w1920_h58.jpg) no-repeat left top;
+            max-width: 1920px;
+            margin: 0 auto;
+            height: 58px;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .worldCupWrap a,
+        .worldCupWrap a:hover {
+            color: #fff;
+        }
+
+        .posCurrent {
+            float: left;
+            padding-left: 385px;
+            padding-top: 21px;
+        }
+
+        .posCurrent a,
+        .posCurrent a:hover {
+            color: #fff;
+        }
+
+        .logoWrap {
+            float: right;
+            padding-right: 20px;
+        }
+
+        .LoginAfter {
+            margin-top: 20px;
+        }
+
+        #loglist a {
+            color: #333;
+        }
+
+        .LoginAfter a.logout {
+            color: #fff;
+        }
+    </style>
+    <!--180611a end-->
+    <div class="worldCupWrap">
+        <div class="posCurrent">
+            <!-- è¿ééè¦ä¿®æ¹ é¢åå±begin-->
+            <!-- <div class="theCurrent cDGray js_crumb"> -->
+                        <a href="http://2018.ifeng.com/">2018ä¸çæ¯</a> &gt;<a href="http://2018.ifeng.com/listpage/106176/1/list.shtml">è¯¸å¼ºæ°é»</a> &gt;æ­£æ
+            <!-- </div> -->
+        </div>
+
+        <!-- è¿ééè¦ä¿®æ¹ é¢åå±end-->
+
+        <div class="logoWrap">
+            <div class="login" id="f-login-none">
+                <a href="https://id.ifeng.com/user/register/" target="_blank" id="register">æ³¨å</a>
+                <a class="f-login" style="cursor:pointer;" id='btnSwapLogin' data-role="f-login">ç»å½</a>
+            </div>
+            <!--180202a begin-->
+            <div class="LoginAfter fl" id="welcome"></div>
+            <!--180202a end-->
+        </div>
+    </div>
+    <script> 
+        requirejs.config({
+            paths: {
+                // éç¨ç»å½
+                "F": "http://y0.ifengimg.com/base/origin/F-amd-1.2.0.min",
+                "public_login": "http://y1.ifengimg.com/commonpage/20151202/public_login.min",
+                "header": "http://p2.ifengimg.com/a/2018/0612/header"
+            },
+            waitSeconds: 20,
+            shim: {}
+        });
+        require(['header'], function (init) {
+            if (typeof init == 'function') {
+                init()
+            } else {
+                init.init();
+            }
+        })
+    </script>
+    <script src="http://m3.ifengimg.com/a/2015/0129/f.header.js"></script>
+    <!--headeréè¦æ³¨éè¯¯å end-->
+    <!--è¿ééè¦ä¿®æ¹ åæç¢ç headerä¸è¾¹ä¸ä¸ªå¾begin -->
+    <style>
+        .picTxt {
+            width: 1000px;
+            margin: 40px auto 0;
+            height: 120px;
+        }
+
+        .picTxt ul {
+            width: 1050px;
+        }
+
+        .picTxt li {
+            float: left;
+            width: 300px;
+            padding-right: 50px;
+        }
+
+        .picTxt img {
+            float: left;
+            padding-right: 10px;
+        }
+
+        .picTxt h3 {
+            font: normal 14px/22px simsun;
+            padding-top: 5px;
+        }
+
+        .picTxt h3 a:hover {
+            color: #f54343;
+        }
+
+        .bd_top {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        #artical {
+            position: relative;
+        }
+
+        #artical_topic {
+            position: absolute;
+            width: 980px;
+            font-size: 30px;
+            font-family: microsoft yahei;
+        }
+
+        #artical_sth {
+            position: absolute;
+            width: 1000px;
+            top: 50px;
+        }
+
+        #artical_real {
+            padding-top: 133px;
+        }
+
+        #artical_sth p {
+            width: 550px;
+            padding-top: 23px;
+        }
+    </style>
+    <!-- è¿éæ¯å¦æ¯å¹¿å -->
+    
+        <div class="picTxt">
+
+    <ul>
+                            <li>
+                        <a href="http://2018.ifeng.com/a/20180709/59081615_0.shtml" target="_blank">
+                            <img src="http://d.ifengimg.com/w155_h90/p3.ifengimg.com/a/2018_28/9b8181e10056715_size81_w450_h266.jpg" width="155" height="90" alt="å®å®£ï¼æ©éååºä»»è¥¿ç­çå½å®¶éä¸»å¸ ">
+                        </a>
+                        <h3>
+                            <a href="http://2018.ifeng.com/a/20180709/59081615_0.shtml" target="_blank">å®å®£ï¼æ©éååºä»»è¥¿ç­çå½å®¶éä¸»å¸ </a>
+                        </h3>
+                    </li>
+                    <li>
+                        <a href="http://sports.ifeng.com/a/20180710/59089458_0.shtml" target="_blank">
+                            <img src="http://d.ifengimg.com/w155_h90/p0.ifengimg.com/fck/2018_28/554e15e894fb9d5_w768_h432.jpg" width="155" height="90" alt="æå¤§å©å¤©ç©ºä½è²ï¼æªæ¥48å°æ¶Cç½è½¬ä¼å°åºç°éå¤§è¿å±">
+                        </a>
+                        <h3>
+                            <a href="http://sports.ifeng.com/a/20180710/59089458_0.shtml" target="_blank">æå¤§å©å¤©ç©ºä½è²ï¼æªæ¥48å°æ¶Cç½è½¬ä¼å°åºç°éå¤§è¿å±</a>
+                        </h3>
+                    </li>
+                    <li>
+                        <a href="http://2018.ifeng.com/a/20180710/59089424_0.shtml" target="_blank">
+                            <img src="http://d.ifengimg.com/w155_h90/p0.ifengimg.com/pmop/2018/0710/7104BBB703C8ECFA891A7C81DE4A6E5F737A8C9C_size43_w634_h441.jpeg" width="155" height="90" alt="ä¸çæ¯åå¼ºåæè¯¦å°½æ°æ®ï¼æ¢è¥¿è¿æå¯è½æ¿ä¸ä¸é¡¹è£èª">
+                        </a>
+                        <h3>
+                            <a href="http://2018.ifeng.com/a/20180710/59089424_0.shtml" target="_blank">ä¸çæ¯åå¼ºåæè¯¦å°½æ°æ®ï¼æ¢è¥¿è¿æå¯è½æ¿ä¸ä¸é¡¹è£èª</a>
+                        </h3>
+                    </li>
+    </ul>
+</div>
+    
+    <!-- headerä¸è¾¹ä¸ä¸ªå¾end -->
+    <div class="space40 bd_top ipad_block"></div>
+
+    <div class="space43"></div>
+    <div itemscope itemtype="http://schema.org/NewsArticle" class="main">
+        <div class="left">
+            <div id="artical">
+                <h1 itemprop="headline" id="artical_topic">æ¿èµæè¾ï¼åæ¥æ¬å¥³è¶³å½èå°äºè¿æ¥åç°é²å±è¡æ¿è¯º</h1>
+                <div id="artical_sth" class="clearfix">
+                    <p class="p_time">
+                        <span itemprop="datePublished" class="ss01">
+                            2018å¹´07æ09æ¥ 18:11:16
+                        </span>
+
+
+                                    <span class="ss02">æ¥æºï¼</span>
+                                    <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+                                        <span itemprop="name" class="ss03 weMediaicon">
+                                            <a href="http://wemedia.ifeng.com/listpage/359900_1/list.shtml" itemprop="isBasedOnUrl" target="_blank" ref="nofollow">èå®¢è¶³çApp</a>
+                                        </span>
+                                    </span>
+
+                    </p>
+                    
+                        <div class="share ipad_block" style="z-index:1000;">
+    <iframe class="miniseebox js_weixin_iframe"  frameborder="0" scrolling="no" style="width:232px; height:0px; position:absolute; left: -37px; bottom: 42px;z-index:102;" src="about:blank"></iframe>
+    <div style="width: 232px; height: 0px; position: absolute; left: -37px; bottom: 30px; z-index: 103; overflow: hidden;" class="js_weixin">
+        <div class="ts_wx" style="background:url(http://y0.ifengimg.com/commonpage/0304/arrow.gif); height:112px; cursor: auto; z-index: 1000; ">
+            <div style="position:relative; padding:6px;z-index: 1000;height: 100%; width: 100%;">
+                <img src="http://h2.ifengimg.com/0f56ee67a4c375c2/2013/1106/indeccode.png" style="width:86px; height:86px; float:left; margin-right:14px;" class="js_wx_qrcod"/>
+                <p style=" line-height:24px; color:#666; font-size:12px; width:auto; padding-top:12px;">ç¨å¾®ä¿¡æ«æäºç»´ç <br/>åäº«è³å¥½ååæåå</p>
+                <div style="position:absolute; left:212px; top:0; width:20px; height:20px;display:block;z-index:104; cursor:pointer;" class="js_wx_close"></div>
+            </div>
+        </div>
+    </div>
+    <div class="bdshare_t bds_tools get-codes-bdshare share-bar-btn1">
+        <a class="bds_tsina js_content_share_btn" data-type="sina"></a>
+        <a class="bds_qzone js_content_share_btn" data-type="qqZone"></a>
+        <a class="bds_twx js_content_share_btn" data-type="weixin"></a>
+    </div>
+</div>
+                    
+
+                    
+                        <div class="box03" id="js_comment_box03" style="display: none">
+    <h5 class="cmt js_commentCount" id="js_commentCount_top">
+         <span class="ss_none">
+         <a href="javascript:void(0);" target="_blank" class="js_joinUrl js_peopleNumber"><em class="js_joinNum"></em><span>äººåä¸</span></a>
+         </span>
+        <a href="javascript:void(0);" target="_blank" class="js_cmtUrl js_commentNumber"><em class="js_cmtNum"></em><span class="ss_none">è¯è®º</span></a>
+    </h5>
+    <script>
+        // @TODO: å½åä½ç½®è·åè¯è®ºæ°
+        if (device.type !== "pc") {
+            creatTasker("auto", ["FM", "renderCommentCount", "jumpToCommentView"], function(F, renderCommentCount, jumpToCommentView) {
+                if (typeof __commentCount !== "undefined") {
+                    renderCommentCount(__commentCount[0], __commentCount[1]);
+                }
+                F.tap(F.one("js_commentCount_top"), function () {
+                    jumpToCommentView();
+                });
+            }, "next", "å½åä½ç½®è·åè¯è®ºæ°");
+        } else if (typeof window['PEOPLE_NUMBER'] !== "undefined") {
+            document.getElementById("js_comment_box03").style.display= "block";
+            document.getElementById("js_commentCount_top").getElementsByTagName("em")[0].innerHTML = window['PEOPLE_NUMBER'];
+            document.getElementById("js_commentCount_top").getElementsByTagName("em")[1].innerHTML = window['COMMENT_NUMBER'];
+        }
+    </script>
+</div>
+                    
+
+                </div>
+                <div id="artical_real" class="js_img_share_area">
+                    <div id="slideNoInsertDefault"></div>
+
+                    <div class="dy_box ss_none">
+                        <div class="bg_top">
+                            <span></span>
+                        </div>
+                        <p>2018å¹´7æ9æ¥ï¼æ®MSNè½¬è½½ãäº§ç»ä½è²æ¥ãæ¶æ¯ï¼åæ¥æ¬å¥³è¶³å½èä¸¸å±±æ¡éå¥äºæ¨æ¥åå TBSçµè§å°ãSunday Japanãèç®æ¶ï¼ç§°å°åç°åå&ldquo;æ¥æ¬éå°ç»èµæªä¸æå¨èï¼å°å¬å¼é²å±è¡è§é¢</p>
+                        <div class="bg_bottom">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div id="main_content" class="js_selection_area">
+                        <!--mainContent begin-->
+                        <p>2018å¹´7æ9æ¥ï¼æ®<i>MSN</i>è½¬è½½ãäº§ç»ä½è²æ¥ãæ¶æ¯ï¼åæ¥æ¬å¥³è¶³å½èä¸¸å±±æ¡éå¥äºæ¨æ¥åå TBSçµè§å°ãSunday Japanãèç®æ¶ï¼ç§°å°åç°åå&ldquo;æ¥æ¬éå°ç»èµæªä¸æå¨èï¼å°å¬å¼é²å±è¡è§é¢&rdquo;çæ¿è¯ºï¼å¹¶æ­åºäºé¢åçã</p>    <p>&nbsp;</p><p class="detailPic"><img src="http://p0.ifengimg.com/pmop/2018/0709/84EFBD91255E93B26B1710AE396FF5CDA9F335F8_size27_w569_h314.jpeg" width="500" height="276" alt="" /></p><p>&nbsp;</p>  <p>æ­¤åï¼ä¸¸å±±æ¡éå¥å¨6æ17æ¥åå è¯¥æ¡£èç®æ¶æ¾è¡¨ç¤ºï¼ä¿ç½æ¯ä¸çæ¯å°ç»èµæ¥æ¬éå°ä¸æå¨èï¼å¦æçéçè¯å°ä¼æ­åºé²å±è¡çè§é¢ã</p>  <p>å¦ä»æ¥æ¬éè½ç¶è¡¨ç°è¶åºé¢æï¼å°ç»èµå´åªæ¯1è1å¹³1è´ç§¯4åãè¿æå³çä¸¸å±±æ¡éå¥çé¢æµå¤±è´¥ã</p>  <p>æ®ç§°å®æ´è§é¢å°äº15æ¥å¯¹å¤å¬å¸ã</p>  <p>&nbsp;<span class="ifengLogo"><a href="http://www.ifeng.com/" target="_blank"><img src="http://p2.ifengimg.com/a/2016/0810/204c433878d5cf9size1_w16_h16.png"/></a></span></p>
+                        <!--mainContent end-->
+                    </div>
+                </div>
+
+                <!--ç¸å³æ°é»-->
+                <!--170621a begin-->
+                <div class="relateNews ipad_block mar20 pad_btm">
+                    <div id="editor_name" style="display:none;">å¤å°å·</div>
+                    <!-- çäºè¿ç ssiç¢ç -->
+                    
+                        <!--[if !IE]> <div id="js_readAndRead" style="display:none;">
+    <h4>çè¿æ¬æç« çäººè¿çè¿ï¼</h4>
+    <div class="js_readList"></div>
+    <script type="text/javascript">
+        // if (device.type === "pc") {
+        //     creatTasker(9, ["F"], function (F) {
+        //         var top = F.offset(F.parent(F.query("#js_readAndRead"))).top - F.height(window);
+        //         var commentLoad = false;
+        //         var readAndReadIt = function () {
+        //             commentLoad = true;
+        //             creatTasker("auto", ["readAndRead"], function (readAndRead) {
+        //                 var read = new readAndRead;
+        //                 read.init('#js_readAndRead', 'http://personal.irecommend.ifeng.com/article.php', 3);
+        //             }, "next", "çè¿è¿ç-pc");                                        
+        //         };
+        //         if (F.scrollTop(window) > top) {
+        //             readAndReadIt();
+        //         } else {
+        //             F.on(window, "scroll", function () {
+        //                 if (commentLoad === false) {
+        //                     top = F.offset(F.parent(F.query("#js_readAndRead"))).top - F.height(window);
+        //                     if (F.scrollTop(window) > top) {
+        //                         readAndReadIt();
+        //                     }
+        //                 }
+        //             });
+        //         }
+
+        //     }, "next", "å»¶è¿å çäºè¿ç-PC");
+        // } else if (device.type === "pad") {
+        //     creatTasker(9, ["FM"], function (F) {
+        //         var top = F.one("js_readAndRead").parentNode.getBoundingClientRect().top + document.body.scrollTop - window.innerHeight;
+        //         var commentLoad = false;
+        //         var readAndReadIt = function () {
+        //             commentLoad = true;
+        //             creatTasker("auto", ["readAndRead"], function (readAndRead) {
+        //                 var read = new readAndRead;
+        //                 read.init('#js_readAndRead', 'http://personal.irecommend.ifeng.com/article.php', 3);
+        //             }, "next", "çè¿è¿ç-pad");
+        //         };
+        //         if (document.body.scrollTop > top) {
+        //             readAndReadIt();
+        //         } else {
+        //             F.addEvent(window, "scroll", function () {
+        //                 if (commentLoad === false) {
+        //                     top = F.one("js_readAndRead").parentNode.getBoundingClientRect().top + document.body.scrollTop - window.innerHeight;
+        //                     if (document.body.scrollTop > top) {
+        //                         readAndReadIt();
+        //                     }
+        //                 }
+        //             });
+        //         }
+
+        //     }, "next", "å»¶è¿å çäºè¿ç-pad");
+        // }
+    </script>
+</div> <![endif]-->
+                    
+                    <!-- çäºè¿ç ssiç¢ç -->
+                </div>
+                <!--170621a end-->
+                <!-- !!!å¨é¨æç« åå®¹åºå!!! -->
+                <!-- !!!äºç»´ç åºå!!! -->
+                <!--161104a begin-->
+                
+                <!--161104a end-->
+                <style type="text/css">
+                    #artical .boxCode {
+                        padding-top: 8px;
+                        text-align: center;
+                        clear: both;
+                        padding-bottom: 25px;
+                    }
+
+                    #artical .boxCode p {
+                        font-size: 14px;
+                        font-weight: bold;
+                        line-height: 28px;
+                        text-align: left;
+                        padding-bottom: 13px;
+                        margin-bottom: 0;
+                    }
+
+                    .box02 {
+                        margin-bottom: 25px;
+                    }
+
+                    .box02 img {
+                        height: 100%;
+                    }
+
+                    .next {
+                        background: none;
+                        padding-top: 55px;
+                        position: relative;
+                    }
+
+                    /*151118a*/
+                </style>
+                <!-- å¬çäºç»´ç begin -->
+                
+                    <div class="box02" style="height:214px;text-align:center">
+  <img src="http://p3.ifengimg.com/a/2017/0822/ef1f8f1ad492125size20_w160_h214.jpg">
+</div>
+
+                
+                <!-- å¬çäºç»´ç end -->
+                <div class="an">
+                    <div class="ss_block page_bg ipad_none"></div>
+                    <div class="next ss_none">
+                        <div class="nextWrap">
+                            
+                        </div>
+                    </div>
+                    <script>
+                        // ç¹å»å¾çè¿å¥ä¸ä¸é¡µ
+                        var currentPage = 1,
+                            pageCount = 1,
+                            url = "http://2018.ifeng.com/a/20180709/59082220_0.shtml";
+
+                        if (currentPage < pageCount) {
+                            var nextUrl = url.replace(/(_)(\d+)(\.shtml)/, '$1' + currentPage + '$3');
+
+                            if (device.type === "pc") {
+                                creatTasker("auto", ["F"], function (F) {
+                                    var imgDom = F.query('#main_content .detailPic')[0];
+                                    var imgHtml = F.html(imgDom);
+                                    if (imgHtml && imgHtml !== '' && !F.find(imgDom, 'a').length) {
+                                        var imgArr = imgHtml.split('>');
+                                        //console.log('imgArr:' + imgArr[1]);
+                                        F.html(imgDom, '<a href="' + nextUrl + '">' + imgArr[0] + '></a>');
+                                    }
+
+                                }, "next", "pcå¾çç¹å»äºä»¶");
+                            } else {
+                                creatTasker("auto", ["FM"], function (F) {
+                                    var contentDom = F.one('main_content');
+                                    var imgDom = contentDom.querySelector('.detailPic');
+                                    if (imgDom) {
+                                        var imgHtml = imgDom.innerHTML;
+                                        if (imgHtml && imgHtml !== '' && !imgDom.querySelector('a')) {
+
+                                            var imgArr = imgHtml.split('>');
+                                            imgDom.innerHTML = '<a href="' + nextUrl + '">' + imgArr[0] + '></a>';
+                                        }
+                                    }
+
+                                }, "next", "mobileå¾çç¹å»äºä»¶");
+                            }
+                        }
+                    </script>
+                </div>
+                <div class="artical_line"></div>
+                <div class="space10"></div>
+                <!-- è°æ¥åè½ -->
+                <!-- è°æ¥åè½ -->
+                <div class="clear"></div>
+
+                <style type="text/css">
+                    #artical_sth2 {
+                        _margin-top: 40px;
+                    }
+                </style>
+                <div id="artical_sth2" class="box_share ss_none ipad_block iphone_block clearfix">
+                    <p class="iphone_none">
+                                            </p>
+                    <p class="zb_ph pc_none_new">
+                                            </p>
+                    <div class="clear" style="clear:both;"></div>
+                    <p class="p01 ss_none" style="display:none;">
+                                            </p>
+                    <!--ç¹èµåè½-->
+                            <div class="space44"></div>
+                            <style>
+.left_bq ul li{ width:38px; float:left; text-align:center; overflow:hidden; cursor:pointer; margin-right:20px;}
+</style>
+<div class="left_bq ipad_none iphone_none clearfix">
+    <ul class="face_box">
+        <li><span></span><div class="xc"><img src="http://p0.ifengimg.com/fe/news_detail/images/hw_00309b25.png" width="38" height="38"></div><b>å¥½æ</b></li>
+        <li><span></span><div class="xc"><img src="http://p0.ifengimg.com/fe/news_detail/images/qp_235ef6bf.png" width="38" height="38"></div><b>é¦ä½©</b></li>
+        <li><span></span><div class="xc"><img src="http://p0.ifengimg.com/fe/zx2/images/dc_ff82dee0.png" width="38" height="38"></div><b>åæ¬¢</b></li>
+        <li><span></span><div class="xc"><img src="http://p0.ifengimg.com/fe/zx2/images/lb_e7323f83.png" width="38" height="38"></div><b>æ³ªå¥</b></li>
+        <li><span></span><div class="xc"><img src="http://p1.ifengimg.com/a/2017/1110/article/cute.png" width="38" height="38"></div><b>å¯ç±</b></li>
+        <li><span></span><div class="xc"><img src="http://p1.ifengimg.com/a/2017/1110/article/think.png" width="38" height="38"></div><b>æè</b></li>
+    </ul>
+</div>
+                    <script>
+                        creatTasker("auto", ["dianzan"], function (dianzan) {
+                            dianzan();
+                        }, "next", "ç¹èµ");
+                    </script>
+
+                        
+                            <div id="artical_sth04" class="ss_none ipad_block iphone_block clearfix">
+    <div class="share iphone_block" style="z-index:1000;">
+    <iframe class="miniseebox js_weixin_iframe"  frameborder="0" scrolling="no" style="width:232px; height:0px; position:absolute; left: -37px; bottom: 42px;z-index:102;" src="about:blank"></iframe>   
+     <div style="width: 232px; height: 0px; position: absolute; left: -37px; bottom: 30px; z-index: 103; overflow: hidden;" class="js_weixin">
+        <div class="ts_wx" style="background:url(http://y0.ifengimg.com/commonpage/0304/arrow.gif); height:112px; cursor: auto; z-index: 1000; ">
+            <div style="position:relative; padding:6px;z-index: 1000;height: 100%; width: 100%;">
+                <img src="http://h2.ifengimg.com/0f56ee67a4c375c2/2013/1106/indeccode.png" style="width:86px; height:86px; float:left; margin-right:14px;" class="js_wx_qrcod"/>
+                <p style=" line-height:24px; color:#666; font-size:12px; width:auto; padding-top:12px;">ç¨å¾®ä¿¡æ«æäºç»´ç <br/>åäº«è³å¥½ååæåå</p>
+                <div style="position:absolute; left:212px; top:0; width:20px; height:20px;display:block;z-index:104; cursor:pointer;" class="js_wx_close"></div>
+            </div>
+        </div>
+    </div>
+   <div class="bdshare_t bds_tools get-codes-bdshare share-bar-btn1 share-bar-btn2 clearfix">
+      <div class="select_share_header pc_none">åäº«å°ï¼</div>
+        <a class="bds_tsina js_content_share_btn" data-type="sina"><span class="pc_none">æ°æµªå¾®å</span></a>
+        <a class="bds_qzone js_content_share_btn" data-type="qqZone"><span class="pc_none">QQç©ºé´</span></a>
+        <a class="bds_twx js_content_share_btn iphone_none" data-type="weixin"></a>
+       </div>
+    </div>
+    <div class="box04 ss_none ipad_block"  style="display:none;">
+        <h5 class="cmt js_commentCount" id="js_commentCount_bottom">
+             <a href="javascript:void(0);" target="_blank" class="js_peopleNumber js_joinUrl"><em class="js_joinNum"></em><span>äººåä¸</span></a>
+                                <a href="javascript:void(0);" target="_blank" class="js_commentNumber js_cmtUrl"><em class="js_cmtNum"></em><span>è¯è®º</span></a>
+        </h5>
+        <script>
+            // @TODO: è·åè¯è®ºæ°
+            if (device.type !== "pc") {
+                creatTasker("auto", ["FM", "renderCommentCount", "jumpToCommentView"], function (F, renderCommentCount, jumpToCommentView) {
+                    if (typeof __commentCount !== "undefined") {
+                        renderCommentCount(__commentCount[0], __commentCount[1]);
+                    }
+                    F.tap(F.one("js_commentCount_bottom"), function () {
+                        jumpToCommentView();
+                    });
+                }, "next", "å½åä½ç½®è·åè¯è®ºæ°");
+            } else if (typeof window['PEOPLE_NUMBER'] !== "undefined") {
+               document.getElementById("js_commentCount_bottom").getElementsByTagName("em")[0].innerHTML = window['PEOPLE_NUMBER'];
+document.getElementById("js_commentCount_bottom").getElementsByTagName("em")[1].innerHTML = window['COMMENT_NUMBER'];
+           }
+    </script>
+    </div>
+</div>
+                        
+
+                            
+                                <!--<div class="cont_bottom_YySmall" style="margin-top:20px;"><a href="http://1.51fa.ifeng.com/goods/home.html?_51fa_page_comsmall" target="_blank"><img src="http://p0.ifengimg.com/a/2017/0215/073999de97d02f4size11_w130_h50.gif"></a></div>-->
+                            
+                </div>
+                <!-- éæ 01 -->
+                <div style="height:30px;clear:both;"></div>
+                
+<!--s_sports_sjb_content_ad_180622_banner01 2018.06.22 18:21:12-->
+<script type="text/javascript">try{aptracker.add(23808);}catch(e){}</script>
+
+
+<script>    
+iis3_config = {
+					"aids" : [
+						{"ap" : "23808", "w" : "300", "h" : "250","res" : "1"}
+					],
+					"mode" : "1"					
+				  };
+</script>
+<script src="http://c0.ifengimg.com/iis/iis_v3_0.js"></script>
+
+<!--/s_sports_sjb_content_ad_180622_banner01-->
+
+                
+                <div class="box02 ss_none" style=" height:16px;"></div>
+
+                <!-- seoæ ç­¾æè¿° -->
+                <div style="display:none;">
+                    <meta itemprop="url" content="http://2018.ifeng.com/a/20180709/59082220_0.shtml">
+                    <meta itemprop="indexUrl" content="http://2018.ifeng.com/">
+                    <meta itemprop="genre" content="å¤å°">
+                    <meta itemprop="description" content="2018å¹´7æ9æ¥ï¼æ®MSNè½¬è½½ãäº§ç»ä½è²æ¥ãæ¶æ¯ï¼åæ¥æ¬å¥³è¶³å½èä¸¸å±±æ¡éå¥äºæ¨æ¥åå TBSçµè§å°ãSunday Japanãèç®æ¶ï¼ç§°å°åç°åå&ldquo;æ¥æ¬éå°ç»èµæªä¸æå¨èï¼å°å¬å¼é²å±è¡è§é¢">
+                    <span itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
+                        <span itemprop="name">
+                            
+                        </span>
+                        <span itemprop="thumbnailUrl">
+                            
+                        </span>
+                    </span>
+                </div>
+            </div>
+
+            <div id="cmtBox">
+                <div id="js_cmtContainer"></div>
+                    
+                        <style>
+    .mod-showAllComment .noMore {
+        display: none;
+    }
+</style>
+<script>
+
+    if (glue.device.type == "pc") {
+        document.write('<link rel="stylesheet" href="http://p0.ifengimg.com/fe/news_F_comment/styles/news_F_comment_main_pc_9b9b3f3a.min.css">');
+    }
+
+    if (glue.device.type == "mobile") {
+        document.write('<link rel="stylesheet" href="http://p0.ifengimg.com/fe/responsiveDetail/styles/responsiveDetail_depmodules_mobile_568fbebe.min.css">');
+    }
+
+
+    if (glue.device.type == "pad") {
+        document.write('<link rel="stylesheet" href="http://p0.ifengimg.com/fe/responsiveDetail/styles/responsiveDetail_depmodules_pad_a8e14e37.min.css">');
+    }
+
+    requirejs.config({
+        paths: {
+            "jquery#1.8.1": "http://y1.ifengimg.com/fe/jQuery/jquery-1.8.1.min",
+            "artTemplate#3.0.3": "http://p0.ifengimg.com/fe/responsiveDetail/scripts/responsiveDetail_depmodules_9f1866ac.min",
+            "cookie_global#1.0.2": "http://p0.ifengimg.com/fe/responsiveDetail/scripts/responsiveDetail_depmodules_9f1866ac.min",
+            "F#1.2.0": "http://y0.ifengimg.com/base/origin/F-amd-1.2.0.min"
+        },
+        waitSeconds: 20,
+        shim: {}
+    });
+
+    require(['jquery#1.8.1'], function ($) {
+        $.noConflict(true);
+    });
+    if (glue.device.type == "pad") {
+        requirejs.config({
+            paths: {
+                "news_F_comment#1.1.5": "http://p0.ifengimg.com/fe/fashion_ssxs/scripts/fashion_ssxs_depmodules_pad_f723a5aa.min"
+
+            },
+            waitSeconds: 20, shim: {}
+        });
+    } else if (glue.device.type == "mobile") {
+        requirejs.config({
+            paths: {
+                "news_F_comment#1.1.5": "http://p0.ifengimg.com/fe/fashion_ssxs/scripts/fashion_ssxs_depmodules_mobile_32e1cf1d.min"
+            },
+            waitSeconds: 20,
+            shim: {}
+        });
+    } else if (glue.device.type == "pc") {
+        requirejs.config({
+            paths: {
+                "news_F_comment#1.3.8" : "http://p0.ifengimg.com/fe/test/scripts/test_depmodules_pc_0747eaeb.min"
+            },
+            waitSeconds: 20,
+            shim: {}
+        });
+    }
+
+    if (device.type === "pc") {
+
+        creatTasker('auto', ["F"], function (F) {
+
+            var top = F.offset(F.query("#cmtBox")).top - F.height(window);
+            var commentLoad = false;
+
+            var commentIt = function () {
+                commentLoad = true;
+                require(['news_F_comment#1.3.8', 'detail'], function (cmt, detail) {
+                    var data = {
+                        'docUrl': detail.commentUrl,
+                        'pcUrl': detail.docUrl,
+                        'docTitle': detail.docName,
+                        'speUrl': detail.speUrl || '',
+                        'skey': detail.skey,
+                        'hotLimit': 2,
+                        'newLimit': 0,
+                        'cmtViewUrl': 'http://gentie.ifeng.com/view.html',
+                        'cmtViewSpecialUrl': 'http://gentie.ifeng.com/view.html'
+                    }
+                    new cmt(glue).create('js_cmtContainer', data);
+                });
+            }
+
+            if (F.scrollTop(window) > top) {
+                commentIt();
+            } else {
+                F.on(window, "scroll", function () {
+                    if (commentLoad === false) {
+                        top = F.offset(F.query("#cmtBox")).top - F.height(window);
+                        if (F.scrollTop(window) > top) {
+                            commentIt();
+                        }
+                    }
+                });
+            }
+        }, "next", "å»¶è¿å è½½è¯è®º-PC");
+    } else {
+        creatTasker('auto', ["FM"], function (F) {
+            var top = F.one("cmtBox").getBoundingClientRect().top + document.body.scrollTop - window.innerHeight;
+            var commentLoad = false;
+
+            var commentIt = function () {
+                commentLoad = true;
+                require(['news_F_comment#1.1.5', 'detail'], function (cmt, detail) {
+                    var data = {
+                        'docUrl': detail.commentUrl,
+                        'pcUrl': detail.docUrl,
+                        'docTitle': detail.docName,
+                        'speUrl': detail.speUrl || '',
+                        'skey': detail.skey,
+                        'hotLimit': 2,
+                        'newLimit': 2,
+                        'cmtViewUrl': 'http://gentie.ifeng.com/view.html',
+                        'cmtViewSpecialUrl': 'http://gentie.ifeng.com/view.html'
+                    }
+                    new cmt(glue).create('js_cmtContainer', data);
+                });
+
+            };
+
+            if (document.body.scrollTop > top) {
+                commentIt();
+            } else {
+                F.addEvent(window, "scroll", function () {
+                    if (commentLoad === false) {
+                        top = F.one("cmtBox").getBoundingClientRect().top + document.body.scrollTop - window.innerHeight;
+                        if (document.body.scrollTop > top) {
+                            commentIt();
+                        }
+                    }
+                });
+            }
+
+        }, "next", "å»¶è¿å è½½è¯è®º-Mobile");
+    }
+
+</script>
+                    
+            </div>
+            <div class="space64  iphone_none ipad_none"></div>
+            <div class="space15 ss_block"></div>
+            <div class="space30 ss_none"></div>
+            <div class="adbox02 ss_none">
+            </div>
+        </div>
+        <!--ä»»æä½ç½®æå¥å¹»ç¯-->
+        <div class="right">
+            <!--180607a begin-->
+            <style>
+                /*ç­ç¹æ°é»*/
+
+                .hotNews_w {
+                    float: left;
+                    margin-top: 133px;
+                }
+
+                .hotNews_w li {
+                    padding-top: 20px;
+                    clear: both;
+                }
+
+                .hotNews_w li img {
+                    float: left;
+                    padding-right: 10px;
+                }
+
+                .hotNews_w li h3 {
+                    font: normal 14px/20px simsun;
+                    padding-top: 15px;
+                }
+
+                /*ç§¯åæ¦*/
+
+                .jf_home_sort {
+                    height: 45px;
+                    padding: 0 2px;
+                    background: #badcf2;
+                }
+
+                .jf_home_sort li {
+                    width: 37px;
+                    font-size: 20px;
+                    color: #fff;
+                    height: 45px;
+                    line-height: 45px;
+                    text-align: center;
+                    float: left;
+                    cursor: pointer;
+                }
+
+                .jf_home_sort .hover {
+                    background: #59b0e9;
+                }
+
+                .jifen_home {
+                    border: 1px solid #e7e7e7;
+                    border-top: none;
+                    height: 225px;
+                    overflow: hidden;
+                }
+
+                .jf_home_title {
+                    border-bottom: 1px solid #e7e7e7;
+                }
+
+                .jf_home_title li {
+                    font-size: 14px;
+                    color: #999;
+                    text-align: center;
+                    width: 34px;
+                    height: 44px;
+                    line-height: 44px;
+                    float: left;
+                }
+
+                .jf_home_box {}
+
+                .jf_home_list {
+                    height: 44px;
+                    border-bottom: 1px solid #e7e7e7;
+                }
+
+                .jf_home_list li {
+                    font-size: 14px;
+                    color: #333;
+                    text-align: center;
+                    height: 44px;
+                    line-height: 44px;
+                    width: 34px;
+                    float: left;
+                }
+
+
+                /*å°ææ¦*/
+
+                .sheshou_home {
+                    border: 1px solid #e7e7e7;
+                    border-top: none;
+                }
+
+                .ss_home_title {
+                    font-size: 14px;
+                    color: #999;
+                    text-align: center;
+                    height: 44px;
+                    border-bottom: 1px solid #e7e7e7;
+                    overflow: hidden;
+                }
+
+                .ss_home_title li {
+                    height: 44px;
+                    line-height: 44px;
+                    float: left;
+                }
+
+                .ss_home_box {
+                    height: 225px;
+                    overflow: hidden;
+                }
+
+                .ss_home_list {
+                    height: 44px;
+                    border-bottom: 1px solid #e7e7e7;
+                    overflow: hidden;
+                }
+
+                .ss_home_list li {
+                    font-size: 14px;
+                    color: #333;
+                    height: 44px;
+                    line-height: 44px;
+                    text-align: center;
+                    float: left;
+                }
+
+                .jf_home_list span,
+                .ss_home_list span {
+                    display: block;
+                    width: 22px;
+                    height: 22px;
+                    line-height: 22px;
+                    border: 1px solid #ccc;
+                    margin: 11px 0 0 18px;
+                }
+
+                .jf_home_list .sTs,
+                .ss_home_list .sTs {
+                    background: #d10007;
+                    border: 1px solid #d10007;
+                    color: #fff;
+                }
+
+                /*é«æ¸å¾é*/
+
+                .hotPic_w {
+                    float: left;
+                    margin-top: 30px;
+                }
+
+                .bigPic_w {
+                    position: relative;
+                    height: 180px;
+                    margin-top:15px;
+                }
+
+                .bigPic_w .txtbg_w {
+                    height: 36px;
+                    opacity: 0.6;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 300px;
+                    background: #000;
+                }
+
+                .bigPic_w .txt_w {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 7px;
+                    text-align: center;
+                    width: 285px;
+                    font-size: 14px;
+                    overflow: hidden;
+                    word-break: keep-all;
+                    white-space:nowrap;
+                }
+
+                /*180611a*/
+
+                .bigPic_w .txt_w a,
+                .bigPic_w .txt_w a:hover {
+                    color: #fff;
+                }
+
+                .list_w {
+                    width: 310px;
+                }
+
+                .list_w li {
+                    float: left;
+                    width: 145px;
+                    position: relative;
+                    height: 120px;
+                    margin: 10px 10px 0 0;
+                }
+
+                .list_w li .txtbg_w {
+                    height: 36px;
+                    opacity: 0.6;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 145px;
+                    background: #000;
+                }
+
+                .list_w li .txt_w {
+                    position: absolute;
+                    bottom: 10px;
+                    text-align: center;
+                    width: 130px;
+                    left: 7px;
+                    font-size: 14px;
+                    overflow: hidden;
+                    word-break: keep-all;
+                    white-space:nowrap;
+                }
+
+                /*180611a*/
+
+                .list_w li .txt_w a,
+                .bigPic_w .txt_w a:hover {
+                    color: #fff;
+                }
+
+                /*å¤å°ç½è§é¢*/
+
+                .video_w {
+                    float: left;
+                    margin-top: 30px;
+                }
+
+                .li_p03 {
+                    height: 60px;
+                    overflow: hidden;
+                }
+
+                /*180611a*/
+
+                .pt30 {
+                    float: left;
+                    padding-top: 30px;
+                }
+            </style>
+            <!--ç­ç¹æ°é» begin-->
+            
+                <div class="hotNews_w">
+    <div class="tit_w">
+        <img src="http://p0.ifengimg.com/fe/news_sports_detail/images/tit_redian_b853db60.jpg" width="300" height="40" alt="">
+    </div>
+    <ul>
+                        <li>
+                    <a href="http://2018.ifeng.com/a/20180710/59089344_0.shtml" target="_blank">
+                        <img src="http://d.ifengimg.com/w165_h100/img1.ugc.ifeng.com/newugc/20180710/2/wemedia/e6230cee3e027b98abe2831bb41c5f6585eac528_size27_w640_h421.jpg" width="165" height="100" alt="">
+                    </a>
+                    <h3>
+                        <a href="http://2018.ifeng.com/a/20180710/59089344_0.shtml" target="_blank">å¾·å°å¸¦æ³å½å²å»å åï¼12å¹´åç»çºªäººæä»ç®åéäº¤è¶³å</a>
+                    </h3>
+                </li>
+                <li>
+                    <a href="http://2018.ifeng.com/a/20180710/59089390_0.shtml" target="_blank">
+                        <img src="http://d.ifengimg.com/w165_h100/p0.ifengimg.com/pmop/2018/0709/E9EC58599F411F5F35F3B35CEADFF5FB70B7C045_size46_w606_h404.jpeg" width="165" height="100" alt="">
+                    </a>
+                    <h3>
+                        <a href="http://2018.ifeng.com/a/20180710/59089390_0.shtml" target="_blank">FIFAè¡¨æ¬ä¸­å½çè¿·ææ£ä¸å±ï¼ç½åï¼å¥å±åèµåé¢ï¼</a>
+                    </h3>
+                </li>
+
+    </ul>
+</div>
+            
+            <!--ç­ç¹æ°é» end-->
+            <!--ç§¯åæ¦ begin-->
+            <div class="pt30">
+                <div>
+                    <img src="http://p0.ifengimg.com/fe/news_sports_detail/images/title_jifengbang_07261a19.jpg">
+                </div>
+                <ul class="jf_home_sort clearfix">
+                    <li id="two1" onmouseover="setTab('two',1,8)" class="hover">A</li>
+                    <li id="two2" onmouseover="setTab('two',2,8)">B</li>
+                    <li id="two3" onmouseover="setTab('two',3,8)">C</li>
+                    <li id="two4" onmouseover="setTab('two',4,8)">D</li>
+                    <li id="two5" onmouseover="setTab('two',5,8)">E</li>
+                    <li id="two6" onmouseover="setTab('two',6,8)">F</li>
+                    <li id="two7" onmouseover="setTab('two',7,8)">G</li>
+                    <li id="two8" onmouseover="setTab('two',8,8)">H</li>
+                </ul>
+                <div class="jifen_home">
+                    <ul class="jf_home_title clearfix" id="jf_home_title">
+                        <li>æå</li>
+                        <li>çé</li>
+                        <li>è</li>
+                        <li>å¹³</li>
+                        <li>è´</li>
+                        <li>ç§¯å</li>
+                    </ul>
+                    <div class="jf_home_box" id="jf_home_box"></div>
+                </div>
+            </div>
+            <!--ç§¯åæ¦ end-->
+            <!--å°ææ¦ begin-->
+            <div class="pt30">
+                <div>
+                    <img src="http://p0.ifengimg.com/fe/news_sports_detail/images/title_sheshoubang_7f6705b1.jpg">
+                </div>
+                <div class="sheshou_home">
+                    <ul class="ss_home_title clearfix" id="ss_home_title">
+                        <li>æå</li>
+                        <li>çå</li>
+                        <li>çé</li>
+                        <li>è¿ç</li>
+                    </ul>
+                    <div class="ss_home_box" id="ss_home_box"></div>
+                </div>
+            </div>
+            <!--å°ææ¦ end-->
+            <!-- ç©å½¢01 -->
+            <div style="height:30px;clear:both;"></div>
+                
+<!--s_sports_sjb_content_ad_180622_juxing01 2018.06.22 18:21:12-->
+<script type="text/javascript">try{aptracker.add(23805);}catch(e){}</script>
+
+
+<script>    
+iis3_config = {
+					"aids" : [
+						{"ap" : "23805", "w" : "300", "h" : "250","res" : "1"}
+					],
+					"mode" : "1"					
+				  };
+</script>
+<script src="http://c0.ifengimg.com/iis/iis_v3_0.js"></script>
+
+<!--/s_sports_sjb_content_ad_180622_juxing01-->
+
+            
+            <!--é«æ¸å¾é begin-->
+            
+                <div class="hotPic_w">
+    <div>
+        <img src="http://p0.ifengimg.com/fe/news_sports_detail/images/tit_tuji_f863c34c.jpg" width="300" height="40" alt="">
+    </div>
+                    <div class="bigPic_w">
+                    <img src="http://d.ifengimg.com/w300_h180/p2.ifengimg.com/a/2018_28/6b0b60a8a15231c_size217_w1080_h1080.jpg" width="300" height="180" alt="">
+                    <div class="txtbg_w"></div>
+                    <div class="txt_w">
+                        <a href="http://2018.ifeng.com/a/20180710/59089991_0.shtml" target="_blank">è±å½æ¼åææ§æç§ å´å¥ç§°è¶³çççåå®¶</a>
+                    </div>
+                </div>
+            </ul>
+                    <ul class="list_w">
+                        <li>
+                            <a href="#" target="_blank">
+                                <img src="http://d.ifengimg.com/w145_h120/p1.ifengimg.com/cmpp/2018_28/f72949d4577c7bc_w1024_h683.jpg" width="145" height="120" alt="">
+                            </a>
+                            <div class="txtbg_w"></div>
+                            <div class="txt_w">
+                                <a href="http://2018.ifeng.com/a/20180709/59081011_0.shtml" target="_blank">æ®é·æ·æ±°è®©äººå¿ç¢ </a>
+                            </div>
+                        </li>
+            </ul>
+                    <ul class="list_w">
+                        <li>
+                            <a href="#" target="_blank">
+                                <img src="http://d.ifengimg.com/w145_h120/p0.ifengimg.com/a/2018_28/ded390ccb965145_size133_w1138_h758.jpg" width="145" height="120" alt="">
+                            </a>
+                            <div class="txtbg_w"></div>
+                            <div class="txt_w">
+                                <a href="http://2018.ifeng.com/a/20180709/59072544_0.shtml" target="_blank">è±æ ¼å°çè¿·è·³å¬äº¤ç ¸å®å®¶</a>
+                            </div>
+                        </li>
+            </ul>
+                    <ul class="list_w">
+                        <li>
+                            <a href="#" target="_blank">
+                                <img src="http://d.ifengimg.com/w145_h120/p2.ifengimg.com/a/2018_28/afc24a73fbc19da_size56_w1024_h683.jpg" width="145" height="120" alt="">
+                            </a>
+                            <div class="txtbg_w"></div>
+                            <div class="txt_w">
+                                <a href="http://2018.ifeng.com/a/20180708/59054096_0.shtml" target="_blank">ç¾å¥³æ»ç»æ¿æåºç¥ä¸ç­æ</a>
+                            </div>
+                        </li>
+            </ul>
+                    <ul class="list_w">
+                        <li>
+                            <a href="#" target="_blank">
+                                <img src="http://d.ifengimg.com/w145_h120/p3.ifengimg.com/a/2018_28/c4b808bd96f49d1_size1899_w3648_h2432.jpg" width="145" height="120" alt="">
+                            </a>
+                            <div class="txtbg_w"></div>
+                            <div class="txt_w">
+                                <a href="http://2018.ifeng.com/a/20180708/59053069_0.shtml" target="_blank">åç½å°äº6-5ä¿ç½æ¯</a>
+                            </div>
+                        </li>
+            </ul>
+</div>
+            
+            <!--é«æ¸å¾é end-->
+            <!-- ç©å½¢02 -->
+            <div style="height:30px;clear:both;"></div>
+                
+<!--s_sports_sjb_content_ad_180622_juxing02 2018.06.22 18:21:12-->
+<script type="text/javascript">try{aptracker.add(23806);}catch(e){}</script>
+
+
+<script>    
+iis3_config = {
+					"aids" : [
+						{"ap" : "23806", "w" : "300", "h" : "250","res" : "1"}
+					],
+					"mode" : "1"					
+				  };
+</script>
+<script src="http://c0.ifengimg.com/iis/iis_v3_0.js"></script>
+
+<!--/s_sports_sjb_content_ad_180622_juxing02-->
+
+            
+            <!--è§é¢ begin-->
+            
+                <div class="video_w">
+    <div class="tit_w">
+        <img src="http://p0.ifengimg.com/fe/news_sports_detail/images/tit_video_06c8b8d1.jpg" width="300" height="40" alt="">
+    </div>
+    <ul class="video" id="js_videoCountBox">
+                            <li>
+                        <a href="http://2018.ifeng.com/a/20180614/58715843_0.shtml" target="_blank" class="alink">
+                            <img src="http://d.ifengimg.com/w165_h100/p0.ifengimg.com/source/pmop/storage_img/2018/06/12/pmop-155558625_size5_w1920_h1080.jpg" alt="ä¸çæ¯ç¾å¤§çæï¼Cç½" data-src=" " class="" width="165" height="100">
+                            <p class="li_p03">ä¸çæ¯ç¾å¤§çæï¼Cç½</p>
+                            <div class="play_btn"></div>
+                        </a>
+                        <p class="li_p04" data-guid="9ab3924b-3d69-4062-9d52-9694090b35fa">æ­æ¾æ°ï¼3530602</p>
+                    </li>
+                    <li>
+                        <a href="http://2018.ifeng.com/a/20180614/58715814_0.shtml" target="_blank" class="alink">
+                            <img src="http://d.ifengimg.com/w165_h100/p0.ifengimg.com/source/pmop/storage_img/2018/06/12/pmop-155736921_size1_w1920_h1080.jpg" alt="ä¸çæ¯ç¾å¤§çæï¼æ¢è¥¿" data-src=" " class="" width="165" height="100">
+                            <p class="li_p03">ä¸çæ¯ç¾å¤§çæï¼æ¢è¥¿</p>
+                            <div class="play_btn"></div>
+                        </a>
+                        <p class="li_p04" data-guid="9ab3924b-3d69-4062-9d52-9694090b35fa">æ­æ¾æ°ï¼3530602</p>
+                    </li>
+                    <li>
+                        <a href="http://2018.ifeng.com/a/20180614/58715810_0.shtml" target="_blank" class="alink">
+                            <img src="http://d.ifengimg.com/w165_h100/p0.ifengimg.com/source/pmop/storage_img/2018/06/14/pmop-091456585_size5_w1920_h1080.jpg" alt="2018ä¸çæ¯ä¸éä¸»ï¼ä¿ç½æ¯" data-src=" " class="" width="165" height="100">
+                            <p class="li_p03">2018ä¸çæ¯ä¸éä¸»ï¼ä¿ç½æ¯</p>
+                            <div class="play_btn"></div>
+                        </a>
+                        <p class="li_p04" data-guid="9ab3924b-3d69-4062-9d52-9694090b35fa">æ­æ¾æ°ï¼3530602</p>
+                    </li>
+                    <li>
+                        <a href="http://2018.ifeng.com/a/20180612/58686605_0.shtml" target="_blank" class="alink">
+                            <img src="http://d.ifengimg.com/w165_h100/p3.ifengimg.com/a/2018_24/e2f71781f4e6ec6.jpg" alt="ä¸çæ¯ç¾å¤§çæä¹é½è¾¾å" data-src=" " class="" width="165" height="100">
+                            <p class="li_p03">ä¸çæ¯ç¾å¤§çæä¹é½è¾¾å</p>
+                            <div class="play_btn"></div>
+                        </a>
+                        <p class="li_p04" data-guid="">æ­æ¾æ°ï¼6489</p>
+                    </li>
+    </ul>
+</div>
+            
+            <!--è§é¢ end-->
+            <!-- ç©å½¢03 -->
+            <div style="height:30px;clear:both;"></div>
+                
+<!--s_sports_sjb_content_ad_180622_juxing03 2018.06.22 18:21:12-->
+<script type="text/javascript">try{aptracker.add(23807);}catch(e){}</script>
+
+
+<script>    
+iis3_config = {
+					"aids" : [
+						{"ap" : "23807", "w" : "300", "h" : "600","res" : "1"}
+					],
+					"mode" : "1"					
+				  };
+</script>
+<script src="http://c0.ifengimg.com/iis/iis_v3_0.js"></script>
+
+<!--/s_sports_sjb_content_ad_180622_juxing03-->
+
+            
+            <!--180607a end-->
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="space10"></div>
+    
+            <div class="go_bank fixed ie6 ss_none">
+        <a href="http://www.ifeng.com/" class="a04" target="_blank"></a>
+    <a href="javascript:void(0);" class="a01 js_cmtUrl" id="js_comment_counts"><span class="js_commentNumber" id="cmtNum"></span></a>
+    <a href="http://help.ifeng.com/" class="a03" target="_blank"></a>
+    <a href="javascript:void(0);" class="a02" id="js_return_top"></a>
+    <script>
+        // @TODO: è¿åé¡¶é¨
+        if (device.type === "pc") {
+            creatTasker(2, ["utils","detail"], function(RightUtilList, detail) {
+                var rightUtilListParam = {
+                    //å°è¯è®ºå¤æé®id
+                    commentBtnId: 'js_comment_counts',
+                    //è¯è®ºå®¹å¨id
+                    commentConId: 'cmtBox',
+                    //è¿åé¡¶é¨æé®id
+                    topBtnId: 'js_return_top',
+                    //æ»å¨æ¶é´
+                    moveTime: 200,
+                    //ç§»å¨æ¬¡æ°
+                    moveCounts: 20,
+                    //æ¯å¦æå¼è¯è®ºé¡µ
+                    isOpen: true,
+                    //æç« ä¿¡æ¯
+                    detail: detail,
+                    //è¯è®ºé¡µå°å
+                    commentUrl: "http://gentie.ifeng.com/view.html"
+                };
+
+                var rightUtilList = new RightUtilList(rightUtilListParam);
+                rightUtilList.init();
+
+            }, "next", "è¿åé¡µé¢é¡¶é¨");
+        }
+</script>
+
+</div>
+
+    
+    
+        <div class="iphone_block pc_none ipad_none" style="padding:0 10px 15px;">
+<a href="http://api.3g.ifeng.com/ifengtg?adid=11345" target="_blank">
+<img src="http://y3.ifengimg.com/a/2015/0130/b3e486531275e3b.JPG" alt="å¤å°æ°é» å¤©å¤©ææ" title="å¤å°æ°é» å¤©å¤©ææ">
+</a>
+</div>
+    
+    <div class="s_anniu">
+        <a href="http://help.ifeng.com/" class="a_message"></a>
+        <a href="#" class="a_back"></a>
+    </div>
+    <div class="searchDiv01 ss_block ipad_block">
+        <div class="theLogo01">
+            <div class="theCurrent01 cDGray">
+                <div class="ss_block nav_bg ipad_block"></div>
+                <a href="http://sports.ifeng.com/">å¤å°</a>
+            </div>
+        </div>
+    </div>
+    
+        <script>
+window.onload=function(){
+var keysForBaidu = location.search;
+if(keysForBaidu.indexOf('_baidualading')>=0){
+    var _keys = keysForBaidu.split("&");
+    var i = 0;
+    for(i;i<_keys.length;i++){
+        var _key = _keys[i].split("=");
+        if(_key[0].indexOf('_baidualading')>=0){
+           document.getElementById('baidualading').style.display='none';
+        }
+    }
+}
+}
+</script>
+    
+    <div class="img_share" id="js_img_share" style="display:none;">
+        <div class="bdshare_t bds_tools get-codes-bdshare share-bar-btn">
+            <a class="bds_tsina js_img_share_btn" data-type="sina" data-fid="f6e7db7e3c3"></a>
+            <a class="bds_qzone js_img_share_btn" data-type="qqZone" data-fid="fbed0e2f6ed"></a>
+        </div>
+    </div>
+    <div class="select_share" id="js_select_share">
+        <div class="select_share_header">
+            åäº«å°:
+        </div>
+        <div class="select_share_body">
+            <a class="select_share_sina js_select_share_btn" data-type="sina" href="javascript:void(0);"></a>
+            <a class="select_share_qq js_select_share_btn" data-type="qqZone" href="javascript:void(0);"></a>
+        </div>
+        <script>
+            // @TODO: æç« åäº«ååè¯åäº«
+            if (device.type === "pc") {
+                creatTasker(2, ["share.pc", "detail"], function (Share, detail) {
+                    var shareParam = {
+                        //åå®¹åäº«ç¸å³æ°æ®
+                        contentData: detail,
+                        //å¼å¯åå®¹åäº«æ å¿ä½
+                        contentFlag: true,
+                        //åå®¹åäº«æé®class
+                        conShareBtnClass: 'js_content_share_btn',
+                        //å¼å¯åè¯åäº«æ å¿ä½
+                        selectionFlag: true,
+                        //åè¯åäº«æé®class
+                        selShareBtnClass: 'js_select_share_btn',
+                        //åè¯å®¹å¨class
+                        selectAreaClass: 'js_selection_area',
+                        //åäº«å®¹å¨id
+                        shareAreaId: 'js_select_share',
+                        sinaRalateUid: '2294251280',
+                        //å¼å¯å¾çåäº«æ å¿ä½
+                        imgFlag: true,
+                        //å¾çåäº«æé®class
+                        imgShareBtnClass: 'js_img_share_btn',
+                        //éè¦åäº«å¾çæå¨åºåclass
+                        imgShareScopeClass: 'js_img_share_area',
+                        //å¾çåäº«å®¹å¨id
+                        imgAreaId: 'js_img_share',
+                        urls: { weixin: 'http://qrcode.ifeng.com/qrcode.php' }
+
+                    };
+                    Share.init(shareParam);
+                }, "next", "åäº«-PC");
+
+                creatTasker(1, ["F", "picLazy"], function (F, picLazy) {
+                    F.on(window, "scroll", picLazy);
+                    picLazy();
+                }, "next", "å¾çæå è½½");
+
+                //ç§»å¨ç«¯
+            } else {
+                creatTasker(2, ["share.mobile", "detail"], function (Share, detail) {
+                    var shareParam = {
+                        //åå®¹åäº«ç¸å³æ°æ®
+                        contentData: detail,
+                        //åå®¹åäº«æé®class
+                        conShareBtnClass: 'js_content_share_btn',
+                        sinaRalateUid: '2294251280'
+                    };
+                    Share.init(shareParam);
+                }, "next", "åäº«-Mobile");
+            }
+        </script>
+    </div>
+
+        
+            
+<!--s_all_content_ad_nqbutton_01 2018.01.17 17:26:48-->
+<script type="text/javascript">try{aptracker.add(6402);}catch(e){}</script>
+
+
+<div class="ss_none">
+<script>    
+iis3_config = {
+					"aids" : [
+						{"ap" : "6402", "w" : "300", "h" : "250","res" : "1"}
+					],
+					"mode" : "1"					
+				  };
+</script>
+<script src="http://c0.ifengimg.com/iis/iis_v3_0.js"></script>
+
+
+</div>
+
+<script>
+//20171020 ä¿®æ¹-æ ç»ä¸­ç»æ¶ä¹ä¸è½å é¤
+if(typeof(getChannelInfo) == "function" && /\/19th\//.test(getChannelInfo())){
+	if(document.getElementById('padhide_2873')){
+		document.getElementById('padhide_2873').style.display ='none';
+	}
+	if(document.getElementById('embed_hzh_div')){
+		document.getElementById('embed_hzh_div').style.display ='none';
+   }
+}
+</script>
+<!--/s_all_content_ad_nqbutton_01-->
+
+        
+
+
+
+    <script>
+    function getChannelInfo() {
+        return "http://2018.ifeng.com/zhuqiangxinwen/,,zmt_359900,fhh_68410263,cmpp_030fQ0059082220";
+    } 
+    </script>
+    <!--/s_news_content_ad_floatmedia-->
+    <!--s_news_content_ad_fanjuanad 2018.06.05 09:15:52-->
+    <script type="text/javascript">try { aptracker.add(4067); } catch (e) { }</script>
+    <div id="padhide_1019">
+        <var style="display:none;" v="4067,0,0,NULL,fixture"></var>
+    </div>
+    <script language="javascript">
+        try { if (iNiceBrowser.IPAD) { document.getElementById("padhide_1019").style.display = "none"; } } catch (e) { ; }
+    </script>
+    <!--/s_news_content_ad_fanjuanad-->
+    <!--s_sports_content_ad_pvcount 2013.10.23 15:01:37-->
+    <!--0,0,NULL,fixture-->
+    <!--/s_sports_content_ad_pvcount-->
+    <!-- éæ 02 -->
+    <div style="height:30px;clear:both;"></div>
+    
+<!--s_sports_sjb_content_ad_180622_bannerdb 2018.06.22 18:21:12-->
+<script type="text/javascript">try{aptracker.add(23809);}catch(e){}</script>
+
+
+<script>    
+iis3_config = {
+					"aids" : [
+						{"ap" : "23809", "w" : "1000", "h" : "90","res" : "1"}
+					],
+					"mode" : "1"					
+				  };
+</script>
+<script src="http://c0.ifengimg.com/iis/iis_v3_0.js"></script>
+
+<!--/s_sports_sjb_content_ad_180622_bannerdb-->
+
+    
+    <!--footeréè¦æ³¨éè¯¯å begin-->
+    
+        <!--footeréè¦æ³¨éè¯¯å begin-->
+<style>
+    .footer {
+        width: 1000px;
+        margin: 0 auto;
+        border-top: 1px solid #ccc
+    }
+
+    .footer a {
+        color: #000;
+        font-size: 12px;
+        text-decoration: none
+    }
+
+    .footer a:hover {
+        color: #f54343;
+        text-decoration: underline
+    }
+
+    .footer .footlink {
+        position: relative;
+        height: 28px;
+        padding-top: 15px;
+        border-top: 1px solid #fff;
+        overflow: hidden;
+        color: #000;
+        line-height: 28px;
+        font-size: 12px
+    }
+
+    .footer .fk_l {
+        text-align: center;
+    }
+
+    .footer .fk_r {
+        position: absolute;
+        width: 100px;
+        right: 0;
+        top: 15px;
+    }
+
+    .footer .fk_l a {
+        padding: 0 7px;
+        border-right: 1px solid #000
+    }
+
+    .footer .fk_l .nolpad {
+        padding-left: 0
+    }
+
+    .footer .fk_l .noborder {
+        border: none
+    }
+
+    .footer .fk_r ul {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        list-style: none
+    }
+
+    .footer .fk_r ul li {
+        float: left;
+        height: 28px;
+        overflow: hidden
+    }
+
+    .footer .fk_r ul .l_bg001 {
+        background: url(http://p2.ifengimg.com/a/2016_21/nav0416_14_fd540caa-fd540caadc.gif) no-repeat left 9px;
+        padding-left: 19px
+    }
+
+    .footer .fk_r ul .l_bg002 {
+        background: url(http://p2.ifengimg.com/a/2016_21/nav0416_17-68c300b50b.gif) no-repeat left 9px;
+        padding-left: 17px;
+        margin-left: 18px
+    }
+
+    .footer .copyright {
+        font-family: Arial, "å®ä½";
+        color: #666;
+        height: 28px;
+        text-align: center;
+        overflow: hidden;
+        line-height: 28px
+    }
+
+    .footer .copyright span {
+        padding-right: 12px;
+        font-size: 12px
+    }
+</style>
+<div id="footer" class="footer mt02">
+    <div class="footlink clearfix">
+        <div class="fk_l">
+            <a class="nolpad" href="http://www.ifeng.com/corp/about/intro/" target="_blank">å¤å°æ°åªä½ä»ç»</a>
+            <a href="http://ir.ifeng.com/" target="_blank">æèµèå³ç³» Investor Relations</a>
+            <a href="http://biz.ifeng.com/" target="_blank">å¹¿åæå¡</a>
+            <a href="http://career.ifeng.com/" target="_blank">è¯å¾è±æ</a>
+            <a href="http://www.ifeng.com/corp/privacy/" target="_blank">ä¿æ¤éç§æ</a>
+            <a href="http://www.ifeng.com/corp/exemption/" target="_blank">åè´£æ¡æ¬¾</a>
+            <a href="http://www.ifeng.com/corp/feedback/" target="_blank">æè§åé¦</a>
+            <a href="http://phtv.ifeng.com/intro/" target="_blank" class="noborder">å¤å°å«è§ä»ç»</a>
+        </div>
+
+    </div>
+    <div class="copyright">
+        <span>å¤å°æ°åªä½</span>
+        <span>çæææ</span>
+        <span>Copyright Â© 2016 Phoenix New Media Limited All Rights Reserved.</span>
+    </div>
+</div>
+<!--footeréè¦æ³¨éè¯¯å end-->
+    
+    
+        <script>var sta_collection_time = new Date().getTime();</script>
+<script id="sta_collection_new">
+window.analytics(encodeURIComponent(window.location.href));
+setTimeout(function() {
+window.aptracker.collection();
+        }, 800);
+</script>
+    
+    
+        <div id="ifeng_da_le" style="width: 1px; height: 1px;">
+  <script src="//m0.ifengimg.com/ifeng/sources/120331-iImpression.js"></script>
+</div>
+    
+    <!--footeréè¦æ³¨éè¯¯å end-->
+    <!-- ç»è®¡æ¢é -->
+    <!-- ç»è®¡æ¢é -->
+    <!--éå±±çæ§ å¼å§-->
+    <script type = "text/javascript" src = "http://s.wrating.com/screen.2.0.js"></script>
+<script type = "text/javascript">
+var dr_ad_acc = "860010-2332010100";
+var dr_ad_url = "http://s.wrating.com/";
+var dr_ad_max_time =  document.location.hash == '#_zbs_duba_hzqp' ? 3 : -1;// åä¼ é´éæ¶é´
+</script>
+    <!--éå±±çæ§ ç»æ-->
+    <style>
+        .hotnews {
+            background: url(http://y0.ifengimg.com/d0169b18072caddd/2015/0113/hotnews.jpg);
+            text-align: left;
+            width: 384px;
+            height: 54px;
+            z-index: 999;
+            position: fixed;
+            left: 50%;
+            margin: 0 0 0 -500px;
+            bottom: 0;
+            _position: absolute;
+            _margin-top: 0;
+            _top: expression(documentElement.scrollTop + documentElement.clientHeight - this.offsetHeight)
+        }
+
+        .s_btn_close {
+            display: block;
+            cursor: pointer;
+            width: 30px;
+            height: 54px;
+            float: right;
+        }
+
+        .p_hotnews {
+            font: bold 16px/54px simsun;
+            padding: 0 0 0 66px;
+            width: 288px;
+            overflow: hidden;
+            float: left;
+        }
+    </style>
+    <div class="hotnews ss_none" id="hotnews" style="display:none;">
+        <span class="s_btn_close" id="s_btn_close"></span>
+        <p class="p_hotnews">
+            <a id="hotnewsurl" href="" target="_blank"></a>
+        </p>
+    </div>
+    <script type="text/javascript" src="http://m0.ifengimg.com/d0169b18072caddd/2015/0113/bottomNews.js"></script>
+    <script>
+        var windowHash = window.location.hash;
+        if (windowHash == "#_zbs_2345_bd") {
+            document.getElementById("baidualading").style.display = "none";
+        }
+    </script>
+    
+        <script>
+    requirejs.config({
+        paths: {
+            "jweixin": "http://res.wx.qq.com/open/js/jweixin-1.0.0"
+        },
+        waitSeconds: 20,
+        shim: {}
+    });
+
+    require(['jquery#1.8.1', 'detail', 'jweixin'], function($, detail, wx){
+
+     $.ajax({
+    url: 'http://api.3g.ifeng.com/weishare_token_api',
+    type: 'get',
+    dataType: 'jsonp',
+    callback: 'wxshareCallback',
+    data: {
+        url: window.location.href
+    },
+    success: function (msg) {
+      wx.config({
+        debug: false, //å¼ä¸ºtrueæ¶è¿å¥debugæ¨¡å¼ï¼å¯ä»¥æåºç¶æå¼
+        appId: msg.appId,
+        timestamp: msg.timestamp,
+        nonceStr: msg.nonceStr,
+        signature: msg.signature,
+        jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage','onMenuShareQQ','onMenuShareWeibo'
+          // ææè¦è°ç¨ç API é½è¦å å°è¿ä¸ªåè¡¨ä¸­
+        ]
+      });
+      wx.ready(function () {
+        wx.checkJsApi({
+            jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage','onMenuShareQQ','onMenuShareWeibo'], // éè¦æ£æµçJSæ¥å£åè¡¨ï¼ææJSæ¥å£åè¡¨è§éå½2,
+            success: function(res) {
+                // ä»¥é®å¼å¯¹çå½¢å¼è¿åï¼å¯ç¨çapiå¼trueï¼ä¸å¯ç¨ä¸ºfalse
+               // console.log(res);
+            }
+        });
+
+        wx.error(function(res){
+           // console.log(res);
+        })
+        //è·åâåäº«å°æååâæé®ç¹å»ç¶æåèªå®ä¹åäº«åå®¹æ¥å£
+        wx.onMenuShareTimeline({
+            title: detail.docName+"_å¤å°"+detail.channelTitle, // åäº«æ é¢
+            link: detail.docUrl, // åäº«é¾æ¥
+            imgUrl: detail.image || 'http://y3.ifengimg.com/a/2016/0414/ab605e5e0631dd6size71_w300_h300.jpg', // åäº«å¾æ 
+            success: function () { 
+                // ç¨æ·ç¡®è®¤åäº«åæ§è¡çåè°å½æ°
+            },
+            cancel: function () { 
+                // ç¨æ·åæ¶åäº«åæ§è¡çåè°å½æ°
+            }
+        });
+        //è·åâåäº«ç»æåâæé®ç¹å»ç¶æåèªå®ä¹åäº«åå®¹æ¥å£
+        wx.onMenuShareAppMessage({
+            title: detail.docName+"_å¤å°"+detail.channelTitle, // åäº«æ é¢
+            desc: detail.summary, // åäº«æè¿°
+            link: detail.docUrl, // åäº«é¾æ¥
+            imgUrl: detail.image || 'http://y3.ifengimg.com/a/2016/0414/ab605e5e0631dd6size71_w300_h300.jpg', // åäº«å¾æ 
+            type: 'link', // åäº«ç±»å,musicãvideoælinkï¼ä¸å¡«é»è®¤ä¸ºlink
+            dataUrl: '', // å¦ætypeæ¯musicævideoï¼åè¦æä¾æ°æ®é¾æ¥ï¼é»è®¤ä¸ºç©º
+            success: function () { 
+                // ç¨æ·ç¡®è®¤åäº«åæ§è¡çåè°å½æ°
+            },
+            cancel: function () { 
+                // ç¨æ·åæ¶åäº«åæ§è¡çåè°å½æ°
+            }
+        });
+        //è·åâåäº«å°QQâæé®ç¹å»ç¶æåèªå®ä¹åäº«åå®¹æ¥å£
+        wx.onMenuShareQQ({
+            title: detail.docName, // åäº«æ é¢
+            desc: detail.summary, // åäº«æè¿°
+            link: detail.docUrl, // åäº«é¾æ¥
+            imgUrl: detail.image, // åäº«å¾æ 
+            success: function () { 
+               // ç¨æ·ç¡®è®¤åäº«åæ§è¡çåè°å½æ°
+              //alert(detail.image);
+            },
+            cancel: function () { 
+               // ç¨æ·åæ¶åäº«åæ§è¡çåè°å½æ°
+            }
+        });
+        //è·åâåäº«å°è¾è®¯å¾®åâæé®ç¹å»ç¶æåèªå®ä¹åäº«åå®¹æ¥å£
+        wx.onMenuShareWeibo({
+            title: detail.docName, // åäº«æ é¢
+            desc: detail.summary, // åäº«æè¿°
+            link: detail.docUrl, // åäº«é¾æ¥
+            imgUrl: detail.image, // åäº«å¾æ 
+            success: function () { 
+               // ç¨æ·ç¡®è®¤åäº«åæ§è¡çåè°å½æ°
+            },
+            cancel: function () { 
+                // ç¨æ·åæ¶åäº«åæ§è¡çåè°å½æ°
+            }
+        });
+
+        //è·åâåäº«å°æååâæé®ç¹å»ç¶æåèªå®ä¹åäº«åå®¹æ¥å£
+        wx.onMenuShareTimeline({
+             title: detail.docName+"_å¤å°"+detail.channelTitle, // åäº«æ é¢
+             link: detail.docUrl, // åäº«é¾æ¥
+             imgUrl: detail.image, // åäº«å¾æ 
+             success: function () { 
+                // ç¨æ·ç¡®è®¤åäº«åæ§è¡çåè°å½æ°
+             },
+             cancel: function () { 
+                // ç¨æ·åæ¶åäº«åæ§è¡çåè°å½æ°
+             }
+        });
+      });
+    }
+  });
+    })
+</script>
+    
+    <script src="http://p1.ifengimg.com/37780e23b9ea2d8b/2018/24/index.js"></script>
+    <script>
+        var teaminfo = 'http://d.ifeng.com/home/worldcup/teaminfo.json';
+        jq.ajax({
+            url: teaminfo,
+            data: "{}",
+            dataType: "jsonp",
+            type: "get",
+            jsonp: "callback",
+            jsonpCallback: "success_score",
+            success: function (data) {
+                teamData(data.json, 0);
+            },
+            error: function (err) {
+                console.log('error');
+            }
+        })
+        var goalinfo = 'http://d.ifeng.com/home/worldcup/goalinfo.json';
+        jq.ajax({
+            url: goalinfo,
+            data: "{}",
+            dataType: "jsonp",
+            type: "get",
+            jsonp: "callback",
+            jsonpCallback: "success_shot",
+            success: function (data) {
+                goalData2(data.json);
+            },
+            error: function (err) {
+                console.log('error');
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="" />
+<meta name="description" content="é¢å¯¹äºé©¬éãè°·æ­ä»¥åè¹æå¯¹æºè½é³ç®±å¸åºçæ¢å¤ºï¼ä¸åä¸»æé«ç«¯é³è´¨æ­è½½æºè½å©æçç¾å½åçSonosåä¹åä¸ä½äºï¼äºä¸å¨äºåç¾å½è¯å¸äº¤æå§åä¼æäº¤äºIPOæè¡ä¹¦ï¼æåéèµé1äº¿ç¾åã" />
+<title>æºè½é³ç®±Sonosæ¬²åä¸å¸ç¿»èº« _æ°é»å½é_åäº¬åæ¥ç½</title>
+<link rel="stylesheet" href="http://img.bbtnews.com.cn/templates/bbtnews/css/xinmem/base.css">
+<link rel="stylesheet" href="http://img.bbtnews.com.cn/templates/bbtnews/css/xinmem/article.css">
+<link rel="stylesheet" href="http://img.bbtnews.com.cn/templates/bbtnews/css/cmstop.dialog.css" />
+<link rel="stylesheet" href="http://img.bbtnews.com.cn/templates/bbtnews/css/cmstop.singup.css" />
+<style>
+        .singup-box {
+            background-color: #eaf2f7;
+        }
+        .singup-panel {
+            background-color: #fff;
+        }
+        .singup-panel .inner {
+            padding: 40px 80px 20px 80px;
+        }
+        .singup-form-left {
+            border-right: 1px solid #eee;
+        }
+        .singup-line {
+            border-bottom: 1px solid #ddd;
+        }
+        .hidden {
+            display: none;
+        }
+        .m-title-a {
+            border-bottom: 1px solid #eee;
+        }
+        .m-title-a .m-title-h2 {
+            color: #444;
+            border-bottom: 1px solid #0091e4;
+        }
+        .m-title-a .m-title-h2 a {
+            color: #444!important;
+        }
+        .m-title-b {
+            background-color: #f6f7f8;
+            border-bottom: 1px solid #ddd;
+        }
+        .m-title-b .name {
+            border-left: 2px solid #777;
+            color: #333;
+        }
+        .m-title-b .summary {
+            color: #444;
+        }
+        .m-title-a .m-title-h2 {
+            color: #444;
+            border-bottom: 1px solid #0091e4;
+        }
+        /*æ é¢*/
+        .m-title-a {
+            height: 28px;
+            padding-bottom: 5px;
+            position: relative;
+        }
+        .m-title-a .m-title-h2 {
+            font-weight: normal;
+            font-size: 18px;
+            height: 33px;
+            position: absolute;
+            left: 0px;
+        }
+        .m-title-b {
+            height: 39px;
+        }
+        .m-title-b .name {
+            font-size: 18px;
+            margin: 10px 15px auto 10px;
+            padding-left: 8px;
+            font-weight: normal;
+            line-height: 20px;
+        }
+        .m-title-b .summary {
+            font-size: 16px;
+            font-weight: normal;
+            margin-top: 8px;
+        }
+.hr20 {
+    height: 20px;
+}
+.hr30 {
+    height: 30px;
+}
+.hr40 {
+    height: 40px;
+}
+.ov {
+    overflow: hidden;
+    zoom:1;
+}
+.singup-box .fl-r {
+    float: right;
+}
+
+.singup-box .fl-l {
+    float: left;
+}
+.input-text {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 220px;
+}
+a{
+    text-decoration: none;
+}
+.memberseccode .m-input-text {
+    min-width: 50px;
+    width: 30px;
+    margin-right: 15px;
+}
+.memberseccode .loginform-img_mar {
+    margin-top: 4px;
+}
+.memberseccode .reload {
+    background-position: -10px -776px;
+    height: 20px;
+    margin-top: 9px;
+    margin-left:3px;
+    width: 20px;
+    overflow: hidden;
+}
+.margin-r-20 {
+    margin-right: 20px;
+}
+.i-gray {
+    color: #ddd;
+}
+
+</style>
+<script type="text/javascript" src="http://img.bbtnews.com.cn/templates/bbtnews/js/jquery/jq172.js"></script>
+<script type="text/javascript" src="http://img.bbtnews.com.cn//js/config.js"></script>
+<script type="text/javascript" src="http://img.bbtnews.com.cn/templates/bbtnews/js/jquery.cookie.js"></script>
+<script src="http://img.bbtnews.com.cn/templates/bbtnews/js/cmstop.dialog.js"></script>
+<script type="text/javascript" src="http://img.bbtnews.com.cn/js/lib/cmstop.seccode.js"></script>
+<script type="text/javascript">
+        var contentid = '251706';// æç« ID
+        var title = "\u667a\u80fd\u97f3\u7bb1Sonos\u6b32\u501f\u4e0a\u5e02\u7ffb\u8eab ";//æç« æ é¢
+        var topicid = '';// è¯è®ºä¸»é¢
+        var context = '';//å¨æåå®¹ç¼å­
+        var content = '';//ç¬¬ä¸é¡µåå®¹ç¼å­
+        var _IMG_URL = 'http://img.bbtnews.com.cn/templates/bbtnews';
+        $(function(){
+            // å¼¹çªç»å½, ä¾èµdialogæä»¶
+            var _dialog;
+            function doDialog() {
+                _dialog = dialog({
+                    title:'ç¨æ·ç»å½',
+                    content: $('.login-dialog-test'),
+                    fixed: true,
+                    skin: 'ui-dialog-login'
+                });
+                _dialog.showModal();
+            }
+
+            if($('.js-ajax-login')[0]) {
+                $(document).on('click', '.js-ajax-login', function(e) {
+                    doDialog();
+                    e.preventDefault();
+                    }).on('focus blur', '.js-focus', function(e) {
+                        $(this).parents('.singup-line').toggleClass('active-border-blue');
+                    }).on('focus', '.js-focus', function() {
+                        $(this).siblings('.tip').addClass('hidden');
+                });
+            }
+
+            // ææ¬æ¡èç¦åå¤±å»ç¦ç¹æç¤ºææ¬æ¾ç¤ºä¸éè
+            if($('.singup-box')[0]) {
+                $('.singup-box').on('click', '.tip', function() {
+                    var $this = $(this)
+                    ,oInput = $this.siblings('input[type=text],input[type=password]');
+                    $this.addClass('hidden');
+                    oInput.focus();
+                }).on('blur', 'input[type=text],input[type=password]', function() {
+                    if(!$(this).val().length) {
+                        $(this).siblings('.tip').toggleClass('hidden');
+                    }
+                });
+            }
+
+            if($('.m-input-text')) {
+                $(document).on('focus','.m-input-text',function() {
+                    if($(this).val().length && $(this).val() == this.defaultValue) {
+                        $(this).removeClass('i-gray');
+                        $(this).val('');
+                    }
+                }).on('blur','.m-input-text',function(){
+                    if(!$(this).val().length) {
+                        $(this).addClass('i-gray');
+                        $(this).val(this.defaultValue);
+                    }
+                })
+            }
+        });
+    </script>
+</head>
+<body>
+<div class="global-header">
+<div class="wrap">
+<a href="http://www.bbtnews.com.cn/" class="logo"></a>
+<div class="search fR J-search">
+<form id="head_search" name="head_search" action="http://app.bbtnews.com.cn/" method="GET" class="ov">
+<input type="hidden" name="app" value="search">
+<input type="hidden" name="controller" value="index">
+<input type="hidden" name="action" value="search">
+<input type="hidden" id="type" name="type" value="all">
+<input name="wd" id="head_wd" type="text">
+<a href="#" class="btn"><i class="ico-sp ico-search"></i></a>
+</form>
+</div>
+<script type="text/javascript">
+    $(function(){
+        $("#head_wd").bind('focus', function(){
+            if($(this).val() == 'è¯·è¾å¥å³é®å­')
+            $(this).val('');
+        });
+
+        $("#head_wd").bind('blur', function(){
+            if($(this).val() == '')
+            $(this).val('è¯·è¾å¥å³é®å­');
+        });
+        $(".btn").click(function(){
+            $("#head_search").submit();
+        });
+    });
+</script>
+<i class="line"></i>
+</div>
+</div>
+<div class="global-nav">
+<ul class="clearfix wrap">
+<li><a class="on" href="http://www.bbtnews.com.cn/news/Political%20and%20econom/"> æ¿ç»</a></li>
+<li><a href="http://www.bbtnews.com.cn/news/Sankei%20shimbun/"> äº§ç»</a></li>
+
+<li><a href="http://www.bbtnews.com.cn/news/Tourism/"> ææ¸¸</a></li>
+<li><a href="http://www.bbtnews.com.cn/news/Culture/"> æå</a></li>
+<li><a href="http://www.bbtnews.com.cn/news/Business/"> åç»</a></li>
+<li><a href="http://www.bbtnews.com.cn/news/The%20listed%20company/"> ä¸å¸å¬å¸</a></li>
+<li><a href="http://www.bbtnews.com.cn/news/The%20financial%20market/"> éèå¸åº</a></li>
+<li><a href="http://www.bbtnews.com.cn/news/The%20international/"> å½éè´¢ç»</a></li>
+<li><a href="http://www.bbtnews.com.cn/news/Observe/"> è§ç¹</a></li>
+<li><a href="http://www.bjbusiness.com.cn/"> åç½</a></li>
+<li><a href="http://www.bbtnews.com.cn/other/lanshipin/"> èè§é¢</a></li>
+<li class="nav-zk J-zk"><a href="javascript:void(0)"><i class="icon-sp icon-zk"></i> å¨å</a></li>
+</ul>
+</div>
+<div class="wrap clearfix">
+<div class="bread">
+æ¨çä½ç½®ï¼
+<a href="http://www.bbtnews.com.cn/">é¦é¡µ</a>
+<i>></i>
+<a href="http://www.bbtnews.com.cn/news/">æ°é»</a>
+<i>></i>
+<a href="http://www.bbtnews.com.cn/news/The international/">å½é</a>
+</div>
+<div class="list-con clearfix">
+<div class="con-left fL" id="J_offsetFlag">
+<div class="con-box con-box-top article-box">
+<div class="article-hd">
+<h3>æºè½é³ç®±Sonosæ¬²åä¸å¸ç¿»èº« </h3>
+<div class="assist clearfix">
+<div class="info">
+<span>åºå¤ï¼å½é</span>
+<span>ä½èï¼è®°è é¶å¤ å®ä¹ è®°è æ±¤èºç</span>
+<span>ç½ç¼ï¼çå·</span>
+<span>2018-07-10</span>
+</div>
+<ul class="tools clearfix">
+<li class="fL" id="J_adjustFontsize">
+<a href="javascript:void(0);"><i class="icon-article icon-font">A</i></a>
+<a href="javascript:void(0);" class="item" data-index="0">å¤§</a>
+<a href="javascript:void(0);" class="on item" data-index="1">ä¸­</a>
+<a href="javascript:void(0);" class="item" data-index="2">å°</a>
+</li>
+<li class="fL">
+<a href="http://www.bbtnews.com.cn/2018/0710/251706.shtml" onclick="addfavorite();return false;" rel="sidebar" class="J-save"><i class="icon-article icon-save"></i>
+æ¶è</a>
+</li>
+<li class="fL">
+<a href="javascript:void(0);" class="shareArticleButton"><i class="icon-article icon-share"></i>
+åäº«</a>
+</li>
+<li class="fL">
+<a target="_blank" href="http://app.bbtnews.com.cn/print.php?contentid=251706"><i class="icon-article icon-print"></i>
+æå°</a>
+</li>
+<li class="fL J-wap-box">
+<a href="javascript:void(0)" class="J-wap-btn"><i class="icon-article icon-phone"></i>ææºç½é¡µç</a>
+<div class="wap-code J-wap-code-pop hide">
+<div class="hd">
+<a href="javascript:void(0)" class="close fR">X</a>
+åäº«å°å¾®ä¿¡æåå
+</div>
+<div class="img"><img src="http://upload.bbtnews.com.cn/qrcode/2018/0710/137775/ucyrpzvcqvpt-7.png" alt=""></div>
+<p>æå¼å¾®ä¿¡ï¼ç¹å»åºé¨çâåç°âï¼</p>
+ <p>ä½¿ç¨âæ«ä¸æ«âå³å¯å°ç½é¡µåäº«è³æååã</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="article-bd" id="pageContent">
+<p style="text-align: center; text-indent: 0;"><img src="http://upload.bbtnews.com.cn/2018/0710/1531154074232.jpg" border="0" alt="8" /></p>
+<p style="text-align: center; text-indent: 0;"><a href="http://upload.bbtnews.com.cn/2018/0710/1531154105320.jpg" target="_blank"><img src="http://upload.bbtnews.com.cn/2018/0710/1531154074420.jpg" border="0" alt="æªæ é¢-4 æ·è´" /></a></p>
+<p></p>
+<p>é¢å¯¹äºé©¬éãè°·æ­ä»¥åè¹æå¯¹æºè½é³ç®±å¸åºçæ¢å¤ºï¼ä¸åä¸»æé«ç«¯é³è´¨æ­è½½æºè½å©æçç¾å½åçSonosåä¹åä¸ä½äºï¼äºä¸å¨äºåç¾å½è¯å¸äº¤æå§åä¼æäº¤äºIPOæè¡ä¹¦ï¼æåéèµé1äº¿ç¾åãéçæµåªä½é³ä¹ä»¥ååç±»è¯­é³å©æçé£éåå±ï¼è¿ä¸æ¬¡èèµè½å¦å¸®å©Sonoså·©åºå¸åºï¼æä½æºè½å®¶å±çé£å£ï¼ä¾ç¶æ¯ä¸ªæªç¥æ°ã</p>
+<p><strong>æ­äºä¸ºç</strong></p>
+<p>æ ¹æ®IPOææï¼æªè³2017å¹´9æåºï¼Sonoså¨è¿ä¸è´¢å¹´çè¥ä¸æ¶å¥è¾¾å°9.93äº¿ç¾åï¼åæ¯å¢é¿10%ï¼åäºæè¾¾å°1420ä¸ç¾åï¼è¾ä¸ä¸å¹´åæç3841ä¸ç¾åå¤§å¹åº¦éä½ãæªè³ä»å¹´3æåºçåå¹´æ¶é´åï¼Sonosæ¶å¥è¾¾å°6.56äº¿ç¾åï¼åæ¯ä¸æå¢é¿18%ï¼å¶é´æ­äºä¸ºçï¼çå©ä¸º1310ä¸ç¾åï¼äºæè¾å»å¹´åææ¶çª14%ã</p>
+<p>å»å¹´ç§å¤©ï¼è¯¥å¬å¸æ¨åºäºèªå·±çæºè½é³ç®±Sonos OneãSonosè¡¨ç¤ºï¼å¨æ¬è´¢å¹´çå6ä¸ªæï¼è¯¥å¬å¸è¥æ¶çå¢1äº¿ç¾åï¼è¿å¨å¾å¤§ç¨åº¦ä¸æ¯å ä¸ºéå®é¢å¢é¿äº29.2%ãSonoså¨æäº¤çæä»¶ä¸­è¡¥åç§°ï¼è¿ç§å¢é¿å¨å¾å¤§ç¨åº¦ä¸æ¯ç±Sonos Oneéå®å¼ºå²ææ¨å¨ã</p>
+<p>è¿æ çæ¯ä¸ªå¥½åå¤´ãSonosè®¡åå¨çº³æ¯è¾¾åè¡ç¥¨äº¤ææä¸å¸ï¼è¡ç¥¨äº¤æä»£ç ä¸º&ldquo;SONO&rdquo;ãç®åï¼Sonoså°æªç¡®å®è¦åè¡çè¡ç¥¨æ°éååè¡ä»·åºé´ï¼åªæ¯è¡¨æä¼å©ç¨IPOçæ¶çæ¥è¿è¡è¥éåç åãææºæé¢æµï¼Sonosæç»èèµè§æ¨¡å¯è½ä¼è¾¾å°2.5äº¿ç¾åãæ©æ ¹å£«ä¸¹å©ãé«çä»¥åAllen&amp;Companyä¸ºSonosæ­¤æ¬¡IPOçä¸»æ¿éåãèIPOåï¼Sonosä¼°å¼é¢è®¡å°è¾¾å°250äº¿-300äº¿ç¾åã</p>
+<p>è¯çäº2002å¹´çSonosï¼åä½åå§äººæåå¯¹å¶çæ³æ³å¶å®å¾ç®åï¼å°±æ¯&ldquo;è®©é³ä¹ç±å¥½èè½å¤å¨å®¶ä¸­çä»»ä½å°æ¹æ­æ¾ä»»ä½æ­æ²&rdquo;ï¼ä»ä»¬å¨å å·å£å·´å·´æEl Paseoé¤åæ¥¼ä¸çä¸ä¸ªå¼æ¾å¼å¤§æ¿é´éå®ç°äºè®¾æ³ï¼å¹¶å¨2004å¹´çAll Things Digitalä¼è®®ä¸å´­é²å¤´è§ï¼ä¸äºç¬¬äºå¹´åå¸äºç¬¬ä¸ä»£äº§åZP100ï¼å­åç®åçè®¾è®¡ãå¯é çæ§è½åå®ç¾çé³è´¨æ¶è·å¦æ½®å¥½è¯ã</p>
+<p><strong>å·¨å¤´å¤¹å»</strong></p>
+<p>Sonosæ¥æå¤§æ¹åæ»¡ç­æçå®¢æ·ãä½å¨äºé©¬éæ¨åºæ¯ææºè½è¯­é³å©æAlexaçDotåEchoåï¼è¯¥å¬å¸éè¿äºåè¯­é³æ§å¶æºè½é³ç®±è½¬åçæºä¼ãä¹åæGoogle Assistantæ¯æçGoogle Homeä¹å å¥è¿æ¥ãä»å¹´æ©äºæ¶åï¼è¹æå§å§æ¥è¿ï¼æ¨åºäºå¶Siriæ§å¶çHomePodã</p>
+<p>ç®åï¼ä¼´éäºé©¬éãè°·æ­ãè¹æç­å·¨å¤´å­åå¶äººå·¥æºè½æ¹é¢çå®åï¼çº·çº·æ¶å¥æºè½å®¶å±é¢åçç«èµï¼Sonosé¢ä¸´çå¸åºæææå ä¸¥å³»ã</p>
+<p>Sonosåä»»CEO John MacFarlaneæ¾å¨åå®¢ä¸­ç§°ï¼&ldquo;å±ææªæ¥ï¼æä»¬ä¸»è¦ä¾é ä¸¤å¤§é¢åï¼å¶ä¸æ¯æµåªä½æå¡ï¼å¶äºæ¯è¯­é³æ§å¶ãåèæä»¬å·²ç»éå¸¸é¢åï¼åèæä»¬ä¸åº¦è½åã&rdquo;</p>
+<p>æ ¹æ®ç ç©¶æºæeMarketçç»è®¡æ°æ®ï¼ç®åï¼äºé©¬éçEchoå å°ç¾å½æºè½é³ç®±å¸åºè¿2/3çä»½é¢ï¼è°·æ­çº¦å 30%ï¼Sonosä¸å¾ä¸ä¸å¶ä»åçäºå¤ºå©ä¸ä»æå ä¸ªç¾åç¹çä»½é¢ï¼è¿å¯¹Sonosèè¨æ¯ä¸ä¸ªéå¸¸è°å·¨çä»»å¡ãä¸æ¹é¢ï¼ä¸­ä½ç«¯å¥é¨å¸åºå·²ç»è¢«äºé©¬éå­åé«æ§ä»·æ¯è¿éæ¢å ï¼èå¦ä¸æ¹é¢ï¼å¨é«ç«¯å¸åºï¼è¹æçHomePodå©ç¨é«é³è´¨åæµåªä½æå¡å¯¹Sonosä¸ç´ä»¥æ¥çä¼å¿åèµ·ææã</p>
+<p>Sonosä¸ç´å¨å¯»æ±æ°çåºè·¯ï¼ä»ä¸åå¤§äººå·¥æºè½å·¨å¤´ä»¥åé³ä¹å¹³å°åä½å°æå±æµ·å¤å¸åºï¼Sonosè¯å¾éè¿&ldquo;äºèç½å&rdquo;åæ´å å¼æ¾ï¼æ¥æèµ¢è¿åºæºè½é³ç®±å¸åºçäºå¤ºæï¼ä½ä¼¼ä¹æäºæ­¥å±¥ç»´è°ã</p>
+<p>Sonoså¼å§ç§¯æå¼ææµ·å¤å¸åºï¼æ°æ®æ¾ç¤ºï¼å¨2017è´¢å¹´ä¸­ï¼å¬å¸è¶è¿ä¸åæ¶å¥æ¥èªäºç¾å½ä»¥å¤çå¸åºãSonosäº2010å¹´è¿é©»ä¸­å½å¸åºï¼å·²å¨åäº¬ãä¸æµ·ãæé½ç­å°å¼è®¾äºä½éªåºæä¸ååºãæ ¹æ®2017å¹´çè§åï¼Sonoså°äºä»å¹´å¨ä¸­å½10ä¸ªåå¸æå±çº¿ä¸é¶å®å®ä½åºã</p>
+<p>é¢å¯¹æ¥å¿æ±¹æ±¹çäºé©¬éãè°·æ­è¿æ ·çè¶ä¸çº¿ç§æå·¨å¤´ï¼Sonosæ¾å¼ºè°èªå·±æ´å¤çæ¯åä¸ä¸ªå¹³å°ï¼è¯­é³åªæ¯ä¸ºäº&ldquo;æ´å¥½çé³ä¹ä½éª&rdquo;ï¼ç¸è¾äºåèç&ldquo;æ´ä½çæ&rdquo;ï¼Sonosè®¤ä¸ºèªå·±ææ´å¤æ ·åçéæ©ã</p>
+<p><strong>å®¶å±æ°é£å£</strong></p>
+<p>&ldquo;å¨&lsquo;é³èç½&rsquo;ä¸­éæ¾å£°é³çåé&rdquo;ï¼è¿æ¯Sonosé¦å¸­æ§è¡å®Patrick Spenseäº2017å¹´11æå¨åäº¬åè¡¨çä¸»é¢æ¼è®²ãèé³èç½å·²ç»æä¸ºå®¶å±é¢åå®ç°å¨é¢æºè½äºèçä¸ä¸ªç¼©å½±ã</p>
+<p>éè¿ææºè½é³ç®±åç»å¹¿å¤§æ¶è´¹èï¼äºèç½å¬å¸å¯ä»¥åç¨æ·å±ç¤ºå¶æ´ä¸ºä¸°å¯çå¹³å°ä¸æå¡ï¼å¶æ¬¡ï¼è¿å¯ä»¥éè¿æºè½é³ç®±çéå®æ¥æéç¨æ·çåé¦ï¼éè¿äºè§£ç¨æ·çä½¿ç¨æåµï¼å¯ä»¥å©åèªèº«æºè½çæ´»åºæ¯æå¡çæ¹è¿ã</p>
+<p>ä½äºå®ä¸ï¼æºè½å®¶å±èåéèçè¿æªæ´é²åºçé®é¢ï¼ä¸æ¹é¢ï¼å¤§å¤æ°ç¨æ·è¿æ²¡æå½¢æä½¿ç¨ä¹ æ¯ï¼åªæ¯ä¸ºäºè·åä¸äºæºè½å®¶å±ä¸­çåå®¹ï¼å¦ä¸æ¹é¢ï¼å ä¸ºæ°æ®äºèæå¯¼è´çéç§å®å¨é®é¢ä¹éè¦å¼èµ·éè§ã</p>
+<p>äºé©¬éç¨ä¸å¹´åçæ¶é´ï¼å´ç»çAlexaæå»ºäºä¸ä¸ªåºå¤§çè¯­é³å¸å½ï¼å®ç°å¯¹å®¤åè®¾å¤çå¨æ¹ä½æ§å¶ï¼è¿å¯ä»¥ç½è´­ä¸åãå«è½¦ãå®å¤åï¼æ­¤å¤ï¼å¨å®å¨æ¹é¢ï¼äºé©¬éä¹ä½åºäºæ¹è¿ï¼å¦å¿åæ¶éæ°æ®ï¼ç®åï¼äºé©¬éçEchoæºè½é³ç®±åºè´§éè¶è¿3300ä¸å°ãå½åçæºè½å®¶å±é¢å¤´ç¾&mdash;&mdash;å°ç±³åæåºäº&ldquo;IoT+AI&rdquo;ï¼å¨é«æ§ä»·æ¯ç¡¬ä»¶çåºç¡ä¸ï¼å¸å±æ°äº§åå¹¶å½¢æä¸å¥å®æ´çäº§ä¸é­ç¯ï¼å¶å®åçæºè½çæ´»ä½ç³»å·²ç»æåãç®åï¼å°ç±³å¨MIOTå¹³å°çèç½è®¾å¤æ»éçªç ´6000ä¸å°ï¼ç±³å®¶Appæ¥æ´»ç¨æ·è¶500ä¸ã</p>
+<p>é¢å¯¹åå¤§å·¨å¤´å©ç¨æºè½é³ç®±äºæ¢æºè½å®¶å±å¸åºçæ¿çåºé¢ï¼ååå¥å±&ldquo;é³èç½&rdquo;çSonosä¼¼ä¹åªè½&ldquo;éèæ±å¨&rdquo;ï¼Sonoså¤§ä¸­ååºæç¥åä½è´è´£äººå¼ ç»´æç§°ï¼Sonoså°èªå·±å®ä½äºå¹³å°ï¼å­åçèªå·±çå¹³å°ä¼å¿ä¸ä¼å¤åä½èä¸èµ·æé ä¸ä¸ªåå®¹å¼æ¾ãæè§¦è¾¾ãå·å¹³ç­æ§åéç¨æ§çå®¶åº­æºè½é³ä¹å¹³å°ã</p>
+<p>è¥å¨å¦æ­¤å°´å°¬çæå¢ä¸ï¼Sonosè½æåä¸å¸ï¼åå©èªå·±çå¹³å°ä¼å¿å»åå»è¯å¾å¸å±æ´ä¸ªæºè½å®¶å±çæçç§æå·¨å¤´ï¼æè®¸æ­£å¦Toulisæè¿°å¾é£æ ·ï¼è½æ´å¥½å°è¯ææºè½å®¶å±åºè¯¥ä»¥ä½ç§æ¨¡å¼å­å¨ã</p>
+<p>åäº¬åæ¥è®°è é¶å¤ å®ä¹ è®°è æ±¤èºç/æ æç/å¶è¡¨</p>
+<p></p> <script type="text/javascript" src="https://api.yuanben.io/badge"></script>
+</div>
+<div class="J-share-btm share-box" data-id="news_1395471" data-title="æºè½é³ç®±Sonosæ¬²åä¸å¸ç¿»èº« " data-summary="æºè½é³ç®±Sonosæ¬²åä¸å¸ç¿»èº« " data-pic="2018/0710/1531154082382.jpg" data-url="http://www.bbtnews.com.cn/2018/0710/251706.shtml">
+<p class="name"><span>å¿«ä¹åäº«</span></p>
+<ul class="clearfix">
+<li class="weibo-share" data-name="sinaminiblog"><a href="javascript:void(0);"></a>
+</li>
+<li class="weixin-share" data-name="weixin"><a href="javascript:void(0);"></a></li>
+<li class="friend-share" data-name="qqim"><a href="javascript:void(0);"></a></li>
+<li class="qzone-share" data-name="qzone"><a href="javascript:void(0);"></a></li>
+ <li class="add-share"><a href="javascript:void(0);" class="shareArticleButton"></a></li>
+</ul>
+<div class="weixin-layer hide" style="left: 147px; display: none;">
+<img src="" alt="">
+<i class="ico-arr"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="fR c-r-wrap">
+<a href="http://www.bbtonline.com.cn" target="_blank"><img width="318px" height="213px" src="http://upload.bbtnews.com.cn/2018/0626/1529982556609.jpg" alt="å³ä¾§å¹¿å"></a>
+<div class="c-r-box source-box">
+<div class="c-r-con clearfix">
+<a class="pink fL clearfix pink" href="http://fcdc.org.cn/index.html"><i class="icon fL"><img src="http://upload.bbtnews.com.cn/2017/0905/1504580637145.jpg" alt="" /></i><span>éä¸ä»·å¼æ¦</span></a>
+<a class="pink fL clearfix green" href="http://biztop10.bjbusiness.com.cn/"><i class="icon fL"><img src="http://upload.bbtnews.com.cn/2017/0124/1485247040318.png" alt="" /></i><span>åå¤§åä¸åç</span></a>
+<a class="pink fL clearfix blue" href="http://biztop10.bjbusiness.com.cn/summit.shtml"><i class="icon fL"><img src="http://upload.bbtnews.com.cn/2017/0121/1484985997161.png" alt="" /></i><span>åä¸é«å³°è®ºå</span></a>
+<a class="pink fL clearfix purple" href="http://special.bbtnews.com.cn/161213/"><i class="icon fL"><img src="http://upload.bbtnews.com.cn/2017/0121/1484985996358.png" alt="" /></i><span>è·¨å¹´ä¿éè</span></a>
+<a class="pink fL clearfix orange" href="http://special.bbtnews.com.cn/151210-3/"><i class="icon fL"><img src="http://upload.bbtnews.com.cn/2017/0121/1484985996675.png" alt="" /></i><span>éèä¸åå¤§åç</span></a>
+<a class="pink fL clearfix yellow" href="http://special.bbtnews.com.cn/161208/"><i class="icon fL"><img src="http://upload.bbtnews.com.cn/2017/0121/1484985996737.png" alt="" /></i><span>äºèç½ç¨è½¦æ¦</span></a>
+<a class="pink fL clearfix red" href="http://special.bbtnews.com.cn/160322-1/"><i class="icon fL"><img src="http://upload.bbtnews.com.cn/2017/0121/1484985996879.png" alt="" /></i><span>é¤é¥®åå¤§åç</span></a>
+<a class="pink fL clearfix sky" href="http://special.bbtnews.com.cn/160722/"><i class="icon fL"><img src="http://upload.bbtnews.com.cn/2017/0121/1484985987523.png" alt="" /></i><span>åäº¬æåå­£</span></a>
+</div>
+</div>
+<div class="c-r-box weibo-goto">
+<div class="c-r-con">
+<a class="link clearfix" href="http://weibo.com/bjshangbao?is_all=1"><i class="icon fL"></i>@åäº¬åæ¥</a>
+</div>
+</div>
+<div class="c-r-box news-rank-list">
+<div class="c-r-title">
+<span>æ°é»æè¡</span>
+</div>
+<div class="c-r-con">
+<ul>
+<li class=" on hot">
+<span class="num">01</span>
+<div class="hd clearfix">
+<a href="http://www.bbtnews.com.cn/2018/0706/251301.shtml" class="img fL"><img src="http://upload.bbtnews.com.cn/2018/0706/thumb_93_62_1530868675165.png" alt="" width="93" height="62"></a>
+<div class="info">
+<p class="tit"><a title="ä¸­å½å¯¹ç¾å³ç¨åå¶æªæ½å®æ½ ç¾å½äº§è¿å£è½¦å³ç¨åè³40%" href="http://www.bbtnews.com.cn/2018/0706/251301.shtml">ä¸­å½å¯¹ç¾å³ç¨åå¶æªæ½</a></p>
+<p><a href="http://www.bbtnews.com.cn/2018/0706/251301.shtml"></a></p>
+</div>
+</div>
+<div class="bd">
+<a href="http://www.bbtnews.com.cn/2018/0706/251301.shtml">ä¸­å½å¯¹ç¾å³ç¨åå¶æªæ½å®æ½ ç¾</a>
+</div>
+</li>
+<li class=" hot">
+<span class="num">02</span>
+<div class="hd clearfix">
+<a href="http://www.bbtnews.com.cn/2018/0708/251406.shtml" class="img fL"><img src="http://upload.bbtnews.com.cn/2018/0708/thumb_93_62_1531057320789.jpg" alt="" width="93" height="62"></a>
+<div class="info">
+<p class="tit"><a title="è¿åæ ¼åå® è°æ¯å°åº¦ä»¿å¶è¯ä¹ç" href="http://www.bbtnews.com.cn/2018/0708/251406.shtml">è¿åæ ¼åå® è°æ¯å°åº¦</a></p>
+<p><a href="http://www.bbtnews.com.cn/2018/0708/251406.shtml"></a></p>
+</div>
+</div>
+<div class="bd">
+<a href="http://www.bbtnews.com.cn/2018/0708/251406.shtml">è¿åæ ¼åå® è°æ¯å°åº¦ä»¿å¶è¯ä¹</a>
+</div>
+</li>
+<li class=" hot">
+<span class="num">03</span>
+<div class="hd clearfix">
+<a href="http://www.bbtnews.com.cn/2018/0705/251155.shtml" class="img fL"><img src="http://upload.bbtnews.com.cn/2018/0706/thumb_93_62_1530806664143.jpg" alt="" width="93" height="62"></a>
+<div class="info">
+<p class="tit"><a title="âéè¾¾ç³»âå¿«éä¸ä¸é¨æ¸ææ½è§å " href="http://www.bbtnews.com.cn/2018/0705/251155.shtml">âéè¾¾ç³»âå¿«éä¸ä¸é¨</a></p>
+<p><a href="http://www.bbtnews.com.cn/2018/0705/251155.shtml">å°½ç®¡é¨åç¤¾åºåå·²è®¾ææºè½å¿«éææé©¿ç«ç­ä»£...</a></p>
+</div>
+</div>
+<div class="bd">
+<a href="http://www.bbtnews.com.cn/2018/0705/251155.shtml">âéè¾¾ç³»âå¿«éä¸ä¸é¨æ¸ææ½è§</a>
+</div>
+</li>
+<li class="">
+<span class="num">04</span>
+<div class="hd clearfix">
+<a href="http://www.bbtnews.com.cn/2018/0705/251166.shtml" class="img fL"><img src="http://upload.bbtnews.com.cn/2017/0503/thumb_93_62_1493744330791.jpg" alt="" width="93" height="62"></a>
+<div class="info">
+<p class="tit"><a title="âæä¸æ¯è¯ç¥âèåçå¤æåå¼ " href="http://www.bbtnews.com.cn/2018/0705/251166.shtml">âæä¸æ¯è¯ç¥âèåç</a></p>
+<p><a href="http://www.bbtnews.com.cn/2018/0705/251166.shtml">7æ5æ¥ï¼ç°å®ä¸»ä¹é¢æãæä¸æ¯è¯ç¥ãæåä¸...</a></p>
+</div>
+</div>
+<div class="bd">
+<a href="http://www.bbtnews.com.cn/2018/0705/251166.shtml">âæä¸æ¯è¯ç¥âèåçå¤æåå¼</a>
+</div>
+</li>
+<li class="">
+<span class="num">05</span>
+<div class="hd clearfix">
+<a href="http://www.bbtnews.com.cn/2018/0708/251412.shtml" class="img fL"><img src="http://upload.bbtnews.com.cn/2018/0708/thumb_93_62_1531062354510.jpg" alt="" width="93" height="62"></a>
+<div class="info">
+<p class="tit"><a title="ä¸­ç¾è´¸æäºç«¯èåçè¾é" href="http://www.bbtnews.com.cn/2018/0708/251412.shtml">ä¸­ç¾è´¸æäºç«¯èåçè¾</a></p>
+<p><a href="http://www.bbtnews.com.cn/2018/0708/251412.shtml"></a></p>
+</div>
+</div>
+<div class="bd">
+<a href="http://www.bbtnews.com.cn/2018/0708/251412.shtml">ä¸­ç¾è´¸æäºç«¯èåçè¾é</a>
+</div>
+</li>
+<li class="">
+<span class="num">06</span>
+<div class="hd clearfix">
+<a href="http://www.bbtnews.com.cn/2018/0708/251441.shtml" class="img fL"><img src="http://upload.bbtnews.com.cn/2018/0708/thumb_93_62_1531065064631.jpg" alt="" width="93" height="62"></a>
+<div class="info">
+ <p class="tit"><a title="å±é©çèå° æ³°å½ææ¸¸åè­¦æ¥ " href="http://www.bbtnews.com.cn/2018/0708/251441.shtml">å±é©çèå° æ³°å½ææ¸¸</a></p>
+<p><a href="http://www.bbtnews.com.cn/2018/0708/251441.shtml">è·ç¦»æ³°å½æ®åæ¸¸è¹å¾è¦äºæåçå·²ç»è¿å»äºâ...</a></p>
+</div>
+</div>
+<div class="bd">
+<a href="http://www.bbtnews.com.cn/2018/0708/251441.shtml">å±é©çèå° æ³°å½ææ¸¸åè­¦æ¥ </a>
+</div>
+</li>
+<li class="">
+<span class="num">07</span>
+<div class="hd clearfix">
+<a href="http://www.bbtnews.com.cn/2018/0708/251432.shtml" class="img fL"><img src="http://upload.bbtnews.com.cn/2018/0708/thumb_93_62_1531064904412.jpg" alt="" width="93" height="62"></a>
+<div class="info">
+<p class="tit"><a title="è°æ¯å°åº¦ä»¿å¶è¯ä¹ç " href="http://www.bbtnews.com.cn/2018/0708/251432.shtml">è°æ¯å°åº¦ä»¿å¶è¯ä¹ç </a></p>
+<p><a href="http://www.bbtnews.com.cn/2018/0708/251432.shtml">ä¸é¨çç«çãæä¸æ¯è¯ç¥ãå°å¬ä¼çè§çº¿æå°...</a></p>
+</div>
+</div>
+<div class="bd">
+<a href="http://www.bbtnews.com.cn/2018/0708/251432.shtml">è°æ¯å°åº¦ä»¿å¶è¯ä¹ç </a>
+</div>
+</li>
+<li class="">
+<span class="num">08</span>
+<div class="hd clearfix">
+<a href="http://www.bbtnews.com.cn/2018/0708/251415.shtml" class="img fL"><img src="http://upload.bbtnews.com.cn/2018/0708/thumb_93_62_1531064175157.jpg" alt="" width="93" height="62"></a>
+<div class="info">
+<p class="tit"><a title="å½é«ä»·âæå½è¯âéä¸å»ä¿âç¬æ¨æ¡¥â" href="http://www.bbtnews.com.cn/2018/0708/251415.shtml">å½é«ä»·âæå½è¯âéä¸</a></p>
+<p><a href="http://www.bbtnews.com.cn/2018/0708/251415.shtml"></a></p>
+</div>
+</div>
+<div class="bd">
+<a href="http://www.bbtnews.com.cn/2018/0708/251415.shtml">å½é«ä»·âæå½è¯âéä¸å»ä¿âç¬</a>
+</div>
+</li>
+<li class="">
+<span class="num">09</span>
+<div class="hd clearfix">
+<a href="http://www.bbtnews.com.cn/2018/0710/251691.shtml" class="img fL"><img src="http://upload.bbtnews.com.cn/2018/0710/thumb_93_62_1531153204408.jpg" alt="" width="93" height="62"></a>
+<div class="info">
+<p class="tit"><a title="ä¸å¸å°ç±³æ­¥å¥ä¸ååº " href="http://www.bbtnews.com.cn/2018/0710/251691.shtml">ä¸å¸å°ç±³æ­¥å¥ä¸ååº </a></p>
+<p><a href="http://www.bbtnews.com.cn/2018/0710/251691.shtml">7æ9æ¥ï¼å°ç±³éå¢äºé¦æ¸¯èäº¤æä¸»æ¿æåä¸å¸...</a></p>
+</div>
+</div>
+<div class="bd">
+<a href="http://www.bbtnews.com.cn/2018/0710/251691.shtml">ä¸å¸å°ç±³æ­¥å¥ä¸ååº </a>
+</div>
+</li>
+<li class="">
+<span class="num">10</span>
+<div class="hd clearfix">
+<a href="http://www.bbtnews.com.cn/2018/0708/251386.shtml" class="img fL"><img src="http://upload.bbtnews.com.cn/2018/0708/thumb_93_62_1531053291549.jpg" alt="" width="93" height="62"></a>
+<div class="info">
+<p class="tit"><a title="å¥ä¸»é¦æ¹  åæâèåè±¡â   " href="http://www.bbtnews.com.cn/2018/0708/251386.shtml">å¥ä¸»é¦æ¹ åæâèå</a></p>
+<p><a href="http://www.bbtnews.com.cn/2018/0708/251386.shtml">å¨ç»åäºé¿è¾¾ä¸¤å¹´çæ³¢æåï¼éå²åæä¸é¦æ¹...</a></p>
+</div>
+</div>
+<div class="bd">
+<a href="http://www.bbtnews.com.cn/2018/0708/251386.shtml">å¥ä¸»é¦æ¹ åæâèåè±¡â </a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="global-footer">
+<div class="hd">
+<div class="wrap">
+<div class="index-title footer-tab-tit">
+ <a href="javascript:void(0);" onmouseover="$('#hzhb').hide();$('#yqlj').show();">åæé¾æ¥</a>
+<a href="javascript:void(0);" onmouseover="$('#yqlj').hide();$('#hzhb').show();" class="last">åä½ä¼ä¼´</a>
+<i></i>
+</div>
+<div class="foot-tab-con">
+
+<ul id="yqlj" class="clearfix">
+<li><a href="http://www.eastmoney.com/" target="_blank">ä¸æ¹è´¢å¯ç½</a></li>
+<li><a href="http://www.fang.com/" target="_blank">æ¿å¤©ä¸</a></li>
+<li><a href="http://www.jctrans.com/" target="_blank">é¦ç¨ç©æµç½ </a></li>
+<li><a href="http://beijing.auto.ifeng.com/" target="_blank">å¤å°æ±½è½¦åäº¬ç«</a></li>
+<li><a href="http://pe.job1001.com/" target="_blank">æèµè±æç½</a></li>
+<li><a href="http://www.ce.cn/" target="_blank">ä¸­å½ç»æµç½</a></li>
+<li><a href="http://www.591hx.com/" target="_blank">åè®¯è´¢ç» </a></li>
+<li><a href="http://www.cnfol.com/" target="_blank">ä¸­éå¨çº¿</a></li>
+<li><a href="http://www.mysteel.com/" target="_blank">æçé¢éç½</a></li>
+<li><a href="http://www.glinfo.com/" target="_blank">å¤§å®ååç½</a></li>
+<li><a href="http://travel.sina.com.cn/" target="_blank">æ°æµªææ¸¸</a></li>
+<li><a href="http://www.cs.com.cn/" target="_blank">ä¸­è¯ç½</a></li>
+<li><a href="http://www.hexun.com/" target="_blank">åè®¯</a></li>
+<li><a href="http://www.nbd.com.cn/" target="_blank">æ¯æ¥æ°é»ç½</a></li>
+<li><a href="http://news.tom.com/" target="_blank">TOM.COM</a></li>
+<li><a href="http://money.163.com/" target="_blank">ç½æè´¢ç»</a></li>
+<li><a href="http://www.artron.net/" target="_blank">éæèºæ¯ç½</a></li>
+<li><a href="http://www.cebnet.com.cn/" target="_blank">ä¸­å½çµå­é¶è¡ç½</a></li>
+<li><a href="http://www.eeo.com.cn/" target="_blank">ç»æµè§å¯ç½</a></li>
+<li><a href="http://hao.360.cn/" target="_blank">360å¯¼èª</a></li>
+<li><a href="http://se.360.cn/" target="_blank">360å®å¨æµè§å¨</a></li>
+</ul>
+
+<ul id="hzhb" class="clearfix" style="display:none;">
+<li><a href="http://www.bjd.com.cn/" target="_blank">äº¬æ¥ç½</a></li>
+<li><a href="http://bjrb.bjd.com.cn/" target="_blank">åäº¬æ¥æ¥ </a></li>
+<li><a href="http://bjwb.bjd.com.cn" target="_blank">åäº¬ææ¥</a></li>
+<li><a href="http://www.morningpost.com.cn/" target="_blank">åäº¬æ¨æ¥</a></li>
+<li><a href="http://www.stardaily.com.cn" target="_blank">åäº¬å¨±ä¹ä¿¡æ¥</a></li>
+<li><a href="http://www.beijingtongxin.com/" target="_blank">åå¿åºçç¤¾</a></li>
+<li><a href="http://news.bjd.com.cn/index.htm" target="_blank">æ°é»ä¸åä½</a></li>
+<li><a href="http://sdjsb.bjd.com.cn" target="_blank">é¦é½å»ºè®¾æ¥</a></li>
+<li><a href="http://toutiao.com/" target="_blank">ä»æ¥å¤´æ¡</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bd">
+<div class="wrap">
+<a href="#" class="logo fL"></a>
+<div class="info">
+<div class="link">
+<a href="http://others.bjbusiness.com.cn/jianjie/index.html" target="_blank">åæ¥ç®ä»</a><span>|</span>
+<a href="http://culture.bbtonline.com.cn/ReaderClub/" target="_blank">è¯»èä¿±ä¹é¨</a><span>|</span>
+<a href="http://www.bbtnews.com.cn/Recruitment/" target="_blank">æèä¿¡æ¯</a><span>|</span>
+<a href="http://www.bbtnews.com.cn/about/copyright.shtml" target="_blank">çæå£°æ</a><span>|</span>
+<a href="http://www.bbtnews.com.cn/" target="_blank">å¨çº¿åé¦</a><span>|</span>
+ <a href="http://www.bbtnews.com.cn/about/contact.shtml" target="_blank">èç³»æä»¬</a><span>|</span>
+<a href="http://www.bbtnews.com.cn/guanggao/" target="_blank">å¹¿å</a> <span>|</span>
+<a href="http://app.bbtnews.com.cn//?app=rss" target="_blank">RSS</a>
+</div>
+<p>æ¬ç½ç«ææåå®¹å±ãåäº¬åæ¥ãç¤¾ææï¼æªç»è®¸å¯ä¸å¾è½¬è½½ã åæ¥æ»æºï¼010-64101978 ç½ç«ç­çº¿ï¼010-64101983</p>
+<p>åæ¥å°åï¼åäº¬å¸æé³åºåå¹³éè¥¿è¡21å· é®ç¼ï¼100013 æ³å¾é¡¾é®ï¼åäº¬å¸æ±ä½³å¾å¸äºå¡æï¼010-64097966ï¼ </p>
+<p>ICPå¤æ¡ç¼å·ï¼äº¬ICPå¤08003726å· äº¬å¬ç½å®å¤110105010335å·</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="side-bar J-side-bar">
+<ul>
+<li><a href="http://special.bbtnews.com.cn/170813-2"><i class="icon-s1"></i>åæ¥ç¤¾åº</a></li>
+<li><a href="http://www.bbtnews.com.cn/review/"><i class="icon-s2"></i>ä»æ¥è¯</a></li>
+<li><a href="http://www.bbtnews.com.cn/news/Observe/Lao%20zhou%20kan%20stock/"><i class="icon-s3"></i>èå¨ä¾è¡</a></li>
+<li><a href="http://www.bbtnews.com.cn/New%20media%20products/News%20picture%20books/"><i class="icon-s4"></i>æ°é»ç»æ¬</a></li>
+<li><a href="http://bbri.bjbusiness.com.cn/"><i class="icon-s5"></i>ç ç©¶é¢</a></li>
+<li><a href="http://epaper.bjbusiness.com.cn/site1/bjsb/html/2017-12/20/node_141.htm"><i class="icon-s6"></i>èç®ä¹¦</a></li>
+<li><a href="http://www.bbtnews.com.cn/Brandactivities/"><i class="icon-s7"></i>åçå»</a></li>
+<li><a href="http://baike.baidu.com/link?url=twSw1Dt-Q3_eVHGYFmuKx5dQ6zcQrSx7iiFKypl-_uINHXNDKAgZ6IRhtOT_RcOjPyHtXpxyRRsJOddyWY18PyD6509dm2aWeUDGyjEStRQXppjWvT4TSttUdOArOPdqowo0BSgiIGhKfxeR_kOuwbrLXjfw7v0CZKvyEpZ9F6q93mEgzoM3anj1v1o2dFhJT9LfbtfM8GAgqG_77GyYL7jUHRu4rjb9vEacqLP_tri"><i class="icon-s8"></i>æ°èºé¦</a></li>
+<li><a href="http://biztop10.bjbusiness.com.cn/"><i class="icon-s9"></i>åå¤§åç</a></li>
+<li><a href="http://special.bbtnews.com.cn/170424-1/"><i class="icon-s10"></i>äº§åè¶å¸</a></li>
+<li><a href="http://www.cece.org.cn"><i class="icon-s12"></i>çµåå¤§ä¼</a></li>
+<li><a href="http://special.bbtnews.com.cn/171219-1/"><i class="icon-s13"></i>SCPR</a></li>
+<li><a href="http://www.bbtnews.com.cn/other/jinshequ/"><i class="icon-s14"></i>åçè¿ç¤¾åº</a></li>
+<li><a href="http://www.bbtnews.com.cn/2016/0821/158551.shtml"><i class="icon-s15"></i>ä¹¦ç»åäººå </a></li>
+<li><a href="http://others.bjbusiness.com.cn/juzhen/index.html"><i class="icon-s16"></i>å¾®ä¿¡ç©éµ</a></li>
+<li><a href="http://www.bbtnews.com.cn/magazine/"><i class="icon-s17"></i>ç²¾å½©ç¹å</a></li>
+</ul>
+</div>
+
+
+<div class="share-bar share-wrap J-share-bar">
+<a href="http://weibo.com/bjshangbao?is_all=1" target="_blank" class="icon-sinaminiblog"><i class="ico-sp ico-wb"></i><em></em></a>
+<a href="http://others.bjbusiness.com.cn/juzhen/index.html" target="_blank" class="icon-wechat">
+<i class="ico-sp ico-wx"></i><em></em>
+</a>
+<a href="mailto:1794039972@qq.com" class="icon-fankui"><i class="ico-sp ico-fankui"></i><em></em></a>
+<a href="javascript:void(0)" class="icon-top J-gotop"><i class="ico-sp ico-top"></i><em></em></a>
+</div>
+
+
+<div class="global-pop hide">
+<div class="wrap">
+<ul class="paper-list">
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/IT%20on%20the%20Internet/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158856118.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/IT%20on%20the%20Internet/" class="txt">ITäºèç½å¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Contemporary%20art/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158839729.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Contemporary%20art/" class="txt">ä¸­å½èºæ¯å¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Yanjing%20calligraphy%20/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158824109.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Yanjing%20calligraphy%20/" class="txt">çäº¬ä¹¦ç»å¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/The%20housing%20market/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158806707.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/The%20housing%20market/" class="txt">æ°åäº¬æ¥¼å¸å¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Business/Consumption/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158789370.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Business/Consumption/" class="txt">æ¶è´¹å¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Cultural%20creativity/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158723464.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Cultural%20creativity/" class="txt">æååæäº§ä¸å¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/The%20capital%20acting/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158758500.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/The%20capital%20acting/" class="txt">é¦é½æ¼èºå¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Chinese%20painting%20and/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158736960.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Chinese%20painting%20and/" class="txt">é¦é½æåæ¶è´¹å¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Business/Fashion/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158646405.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Business/Fashion/" class="txt">æ¶å°å¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/The%20car/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158623557.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/The%20car/" class="txt">æ¶ä»£æ±½è½¦å¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Finance%20and%20economic/Securities/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158604514.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Finance%20and%20economic/Securities/" class="txt">ä¸å¸å¬å¸å¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Business/Business/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158587840.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Business/Business/" class="txt">åä¸å¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Panjiayuan/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158570974.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Panjiayuan/" class="txt">æ½å®¶å­å¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Finance%20and%20economic/Financial/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158556370.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Finance%20and%20economic/Financial/" class="txt">çè´¢å¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Tourism/The%20alcohol/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158539464.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Tourism/The%20alcohol/" class="txt">éä¸å¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Beijing-tianjin-hebe/beijing-tianjin-hebe/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158521601.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Beijing-tianjin-hebe/beijing-tianjin-hebe/" class="txt">äº¬æ´¥åå¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/Education/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0315/thumb_90_120_1489575220154.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/Education/" class="txt">æè²å¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Finance%20and%20economic/Insurance/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158178986.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Finance%20and%20economic/Insurance/" class="txt">ä¿é©å¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Tourism/food/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158215695.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Tourism/food/" class="txt">é¤é¥®å¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/Sankei%20shimbun/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158251921.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/Sankei%20shimbun/" class="txt">äº§ç»å¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Collection/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158295930.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Collection/" class="txt">å¸èå¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Business/Electricity/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158316721.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Business/Electricity/" class="txt">çµåå¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Tourism/The%20high-end%20tourism/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0210/thumb_90_120_1486693443340.jpeg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Tourism/The%20high-end%20tourism/" class="txt">é«ç«¯ææ¸¸</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Finance%20and%20economic/Internet%20financial/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158377461.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Finance%20and%20economic/Internet%20financial/" class="txt">äºèç½éèå¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Finance%20and%20economic/Fund/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158400479.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Finance%20and%20economic/Fund/" class="txt">åºéå¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/Home%20appliance%20digit/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158418792.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/Home%20appliance%20digit/" class="txt">å®¶çµæ°ç å¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Business/Household/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158439844.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Business/Household/" class="txt">å®¶å±äº§ä¸å¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/Health/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158467141.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/Health/" class="txt">å¥åº·å¨å</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/zhongguoyishuyuekan/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0219/thumb_90_120_1487495824502.jpeg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/zhongguoyishuyuekan/" class="txt">ä¸­å½èºæ¯</a>
+</li>
+</ul>
+</div>
+</div>
+
+<script src="http://static.bshare.cn/b/buttonLite.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="http://img.bbtnews.com.cn/templates/bbtnews/js/xinmem/common.js"></script>
+<script type="text/javascript" src="http://img.bbtnews.com.cn/templates/bbtnews/js/xinmem/detail.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+ $('#pageContent>p').each(function(k,v){
+	if($(this).find('img').length!=0){
+		$(this).css('text-indent','0px');
+	}
+})
+</script>

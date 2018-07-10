@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="è¥å»æ ¡å­ å°æ¹ç¹è²">
+    <meta name="description" content="ï¼è®°èé©¬ä½³ éè®¯åæ¨åªåªï¼è¿æ¥ï¼ç±ä¸­å½ç¾çé¢é²æ§å¶ä¸­å¿è¥å»ä¸å¥åº·æä¸»åçââè¥å»æ ¡å­âè¯ç¹é¡¹ç®201...">
+    <title>æ¨è¿âè¥å»æ ¡å­âè¦åæ¥å°æ¹ç¹è²ï¼å¥åº·æ¥ç½ââå½å®¶å¥åº·é¨æ·</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/static/index/public/css/base.css" type="text/css">
+    <link rel="stylesheet" href="/static/index/public/css/news.css" type="text/css">
+    <link rel="stylesheet" href="/static/index/public/css/ad_css.css" type="text/css">
+    <script src="/static/index/public/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="/static/index/public/js/base.js" type="text/javascript"></script>
+    <script src="/static/index/public/js/superSlide.js" type="text/javascript"></script>
+    <script src="/static/index/public/js/kindEditor.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+<div class="top">
+    <div class="inner">
+        <a href="http://www.jkb.com.cn/" class="fl goIndex">å¥åº·æ¥ç½é¦é¡µ</a>
+        <span class="fl" id="time"><script language="javascript">showDate()</script></span>
+        <ul class="topFr fr" id="dropdown_nav">
+            <li style="display: none">
+                <a href="#">ç»å½</a>
+                <a href="#">æ³¨å</a>
+            </li>
+            <li class="wx">
+                <a>å¾®ä¿¡</a>
+                <ul class="sub_nav" style="display: none;">
+                    <li> <img src="/static/index/public/images/ico-jkb-weixin.jpg"> </li>
+                </ul>
+            </li>
+            <li class="wb"><img src="/static/index/public/images/wb2.png" alt=""><a href="http://weibo.com/jkb1931" target="_blank">å¾®å</a></li>
+            <li>
+                <a onclick="shoucang(document.title,window.location);return false" href="javascript:void(0)">æ¶è</a>
+            </li>
+            <li class="lastLi">
+                <a href="http://www.jkb.com.cn/sitemap.html">ç½ç«å¯¼èª</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--äºçº§æ ç®å¯¼èª å¼å§-->
+<div class="nav inner menuTwo clearFix">
+        <dl>
+            <dt><a href='http://www.jkb.com.cn/news/'>æ°é»</a> </dt>
+            <dd><a href='http://www.jkb.com.cn/news/technology/'>å»è¯ç§æ</a></dd>
+            <dd><a href='http://www.jkb.com.cn/news/publicHealth/'>å¬å±å«ç</a></dd>
+            <dd><a href='http://www.jkb.com.cn/news/commentary/'>æ¶è¯</a></dd>
+        </dl>
+        <dl>
+            <dt><a href='http://www.jkb.com.cn/xunyiwenyao/'>å¯»å»é®è¯</a> </dt>
+            <dd><a href='http://www.jkb.com.cn/TCM/'>ä¸­å»ä¸­è¯</a></dd>
+            <dd><a href='http://www.jkb.com.cn/foodDrugSafety/'>é£åè¯å</a></dd>
+            <dd><a href='http://www.jkb.com.cn/doctorsCorner/'>å»çé¢é</a></dd>
+        </dl>
+        <dl>
+            <dt><a href='http://www.jkb.com.cn/video/'>è§é¢</a> </dt>
+            <dd><a href='http://www.jkb.com.cn/sjcws/sjcws/'>åºå±å«ç</a></dd>
+            <dd><a href='http://www.jkb.com.cn/news/familyPlanning/'>äººå£è®¡ç</a></dd>
+            <dd><a href='http://www.jkb.com.cn/localnews/'>å°æ¹å¨æ</a></dd>
+        </dl>
+        <dl>
+            <dt><a href='http://www.jkb.com.cn/opinionSituation/'>èæ</a> </dt>
+            <dd><a href='http://www.jkb.com.cn/thinkingDiscussion/'>æ¢è®¨æè</a></dd>
+            <dd><a href='http://www.jkb.com.cn/news/industrialEconomy/'>äº§ä¸ç»æµ</a></dd>
+            <dd><a href='http://www.jkb.com.cn/management/'>ç®¡ç</a></dd>
+        </dl>
+        <dl>
+            <dt><a href='http://www.jkb.com.cn/healthyLiving/'>å¥åº·çæ´»</a></dt>
+            <dd><a href="###">å¥åº·è®²å</a></dd>
+            <dd><a href='http://www.jkb.com.cn/medicalFrontier/'>å»å­¦åæ²¿</a></dd>
+            <dd><a href='http://www.jkb.com.cn/medicalHumanities/'>å»å­¦äººæ</a></dd>
+        </dl>
+        <dl>
+            <dt><a href='http://www.jkb.com.cn/hotTopics/'>ä¸é¢</a></dt>
+            <dd><a href='http://www.jkb.com.cn/governmentAffairs/'>æ¿å¡ä¿¡æ¯</a></dd>
+            <dd><a href='http://www.jkb.com.cn/educationTraining/'>æè²å¹è®­</a></dd>
+            <dd><a href="http://hr.jkb.com.cn/" target="_blank">äººææè</a></dd>
+        </dl>
+
+</div>
+<!--å¯¼èªä¸å¹¿å-->
+<div class="ad_11 inner mb10 ad_h99">
+    <script type="text/javascript">
+        $.ajax({
+            type: 'post',
+            url: '/static/data/poster_js/json99.json',
+            dataType: 'json',
+            success: function(data){
+                $('.ad_11').html('');
+                var str01='<a href="'+data[0].adurl+'">'+data[0].adtype+'</a>';
+                $('.ad_11').append(str01);
+            },
+            error: function(){
+
+            }
+        });
+    </script>
+</div>
+
+<div class="twoLogo inner clearFix twoLogoInstle">
+    <a class="logo fl">
+        <h1 class="fl">è¡ä¸å¿«è®¯</h1>
+    </a>
+	    <span class="lev3-on">
+       <a href="http://www.jkb.com.cn/">é¦é¡µ</a><span> &gt; </span><a href='http://www.jkb.com.cn/news/industryNews/'>è¡ä¸å¿«è®¯</a> &gt;  æ­£æ</span>    </span>
+    <div class="form fr">
+            <form action="/search.html" method="get" class="clearFix">
+                <input type="text" name="title" placeholder="å¥åº·æ¥ç½" class="formTop fl">
+                <input type="submit" class="formImg fl">
+            </form>
+    </div>
+
+</div>
+<div class="news-details inner clearFix">
+    <div class="mainL fl">
+        <div class="title">
+            <div class="P_01"></div>
+            <h3>æ¨è¿âè¥å»æ ¡å­âè¦åæ¥å°æ¹ç¹è²</h3>
+             <div class="P_02"></div>
+            <h5 class="mainLH5">
+                <span class="fl" style="padding-left: 0">2018-07-10 00:25:32</span>
+                <span class="fl">æ¥æºï¼<a href="http://www.jkb.com.cn">å¥åº·æ¥</a></span>
+                <span class="fl share"onmouseover="share.setShare('/news/industryNews/2018/0710/433467.html', 'æ¨è¿âè¥å»æ ¡å­âè¦åæ¥å°æ¹ç¹è²');">Â åäº«
+                    <a href="http://www.jiathis.com/share?uid=1609262" class="jiathis jiathis_txt jtico jtico_jiathis jticoInstail" target="_blank" style="width: 12px; height: 12px;"></a>
+                </span>
+                <em class="fr narrow" id="fbig" style="margin-left: 10px;" ></em>
+                <em class="fr enlarge" id="fsma"></em>
+
+            </h5>
+        </div>
+        <div class="content">
+            <div id="nc_con">
+                &emsp;&emsp;ï¼è®°èé©¬ä½³ éè®¯åæ¨åªåªï¼è¿æ¥ï¼ç±ä¸­å½ç¾çé¢é²æ§å¶ä¸­å¿è¥å»ä¸å¥åº·æä¸»åçââè¥å»æ ¡å­âè¯ç¹é¡¹ç®2018å¹´åº¦å·¥ä½æ¨è¿ä¼âå¨åå·çæé½å¸å¬å¼ãä¸ä¼ä¸å®¶æåºï¼ç»è¿ä¸¤å¹´è¯ç¹ï¼âè¥å»æ ¡å­âé¡¹ç®å¾å°åæ¹çæ¯æåè®¤å¯ï¼äº§çäºç§¯æçç¤¾ä¼å½±åãä¸ä¸æ­¥ï¼è¦ç»§ç»­æç§é¡¹ç®æ»ä½æ¹æ¡è¦æ±ï¼åå¥½é¡¹ç®å¿åæ´»å¨åèªä¸»éåæ´»å¨ï¼åæ¥å°æ¹ç¹è²ï¼é¼å±åæ°ï¼åæ¶å å¼ºçæµåè¯ä»·ï¼ä¸ºè¿ä¸æ­¥æ¨è¿å¨å½âè¥å»æ ¡å­âé¡¹ç®å·¥ä½æä¾ä¾æ®åæ¯æã<br />
+<br />
+&emsp;&emsp;æ®é¡¹ç®è´è´£äººãä¸­å½ç¾æ§ä¸­å¿è¥å»ä¸å¥åº·æå¯æé¿èµµæåä»ç»ï¼2015å¹´ï¼ååå½å®¶å«çè®¡çå§ç¾æ§å±å§æï¼è¯¥æå¼å±äºâåå¸ä¸­å°å­¦çè¥å»ç¶åµå¹²é¢ç­ç¥ç ç©¶âé¡¹ç®ï¼æåºæ¹åæå½åå¸ä¸­å°å­¦çè¥å»ç¶åµé¦åè¦è·å¾æ¿ç­æ§æ¯æï¼è¿åºå¼å±è³é£ç®¡çãä¿è¿èº«ä½æ´»å¨åè¥å»æè²ãä¹åï¼è¯¥æåå¨åäº¬å¸é¡ºä¹åºç­å°å¼å±äºâåå¸ä¸­å°å­¦çâæ ¡å­è¥å»é£è²âç­ç¥ç ç©¶âï¼éè¿âæå»ºå¤é¨é¨èå¨ãå®¶é¿åæå¸äºå¨ãä¸­å°å­¦çä¸»å¨åä¸ãå­¦æ ¡è´ä¸»è´£çæ ¡å­è¥å»é£è²æ¨¡å¼âï¼âæ­å»ºè¥å»é£è²åæ°å¹³å°åä¿¡æ¯åå¹³å°âï¼âå®ç°å­¦çä¼åä¸éèãæé¿ä¸é¡¹ä½è²æ´»å¨ãä¼è®²ä¸å è¯¾3ä¸ªæè½æåâä¸å¤§è¡å¨ï¼é¢é²åæ§å¶åå¸å¿ç«¥è¶éè¥èã2017å¹´ï¼é¡¹ç®æ©å±å°7ä¸ªçï¼å¹¶å¾å°èåå½å¿ç«¥åºéä¼çæ¯æã<br />
+<br />
+&emsp;&emsp;ä¼ä¸ï¼æ¥èªåäº¬å¸é¡ºä¹åºãæ²³åçç³å®¶åºå¸æ°ååºãè¾½å®ççé¦å¸å¤§æ´¼åºãæµæ±çéåå¸ä¹ä¹å¸ãå±±ä¸çéå²å¸é»å²åºãå¹¿è¥¿å£®æèªæ²»åºåå®å¸éå®å¿ãçèçå¹³åå¸åºæµªå¿ååå·çæé½å¸è²æ±å¿8ä¸ªè¯ç¹æå¨çãå¸ãåºï¼å¿ï¼çç¾æ§ä¸­å¿åæè²é¨é¨ä»£è¡¨ï¼åäº«äºåå°âè¥å»æ ¡å­âæ´»å¨å¼å±æåµï¼ä¸ä¼ä¸å®¶åé¢å¯¼å¯¹åå°å·¥ä½éä¸ç¹è¯ï¼å¹¶å¯¹ä»åå·¥ä½æåºå·ä½å»ºè®®ã<br />            </div>
+            <div id="nc_page">
+                <!--//åé¡µæä½æé®-->
+            </div>
+        </div>
+        <div class="back">
+            <a href="http://www.jkb.com.cn/" class="fr">è¿åå¥åº·æ¥ç½é¦é¡µ>></a>
+            <img src="/static/index/public/images/news-logo.png" alt="" class="fr">
+        </div>
+
+
+        <div class="about-news">
+            <h3>ç¸å³æ°é»</h3>
+                        </div>
+        <!-- JiaThis Button BEGIN -->
+        <div class="jiathis_style clearFix">
+            <span class="jiathis_txt">åäº«å°ï¼</span>
+            <a class="jiathis_button_qzone"></a>
+            <a class="jiathis_button_tsina"></a>
+            <a class="jiathis_button_tqq"></a>
+            <a class="jiathis_button_weixin"></a>
+            <a href="http://www.jiathis.com/share?uid=1912411" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+        </div>
+        <script type="text/javascript">
+            var jiathis_config = {data_track_clickback:'true'};
+        </script>
+        <!-- JiaThis Button END -->
+        <!--è¯¦æé¡µå·¦åºå¹¿å-->
+        <div class="ad_13 mt20 mb20 ad_n126 ad_news"></div>
+
+        <!--è¯è®º-->
+        <!--é«éç-->
+        <div id="SOHUCS"></div>
+        <script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+        <script type="text/javascript">
+            window.changyan.api.config({
+                appid: 'cytsG930j',
+                conf: 'prod_480323c93b76096201f51c0508fd1142'
+            });
+        </script>
+
+    </div>
+    <div class="mainR fr">
+        <div class="news-pic-right ad_n17 ad_r">
+        </div>
+        <div class="news-list-right">
+            <h3 class="news-title2">æ¨èéè¯»</h3>
+            <ul>
+            </ul>
+            <script type="text/javascript">
+                $.ajax({
+                    type: 'post',
+                    // url: '/static/data/json/json10_1.json',
+                    url: '/static/data/json/json10_2.json',
+                    dataType: 'json',
+                    success: function(data){
+                        if(data.length != 0){
+                            for(var i=0;i<6;i++){
+                                var str2='<li><a href="'+data[i].newsUrl+'" class="ellipsis" title="'+data[i].newsTitle+'" target="_blank">'+data[i].newsTitle+'</a></li>';
+                                $('.news-list-right ul').append(str2);
+                            }                            
+                        }
+
+                    },
+                    error: function(){
+
+                    }
+                })
+            </script>
+        </div>
+        <div class="news-pic-right ad_n121 ad_r">
+        </div>
+        <div class="new-right-ranking">
+            <h3 class="news-title2">ç­åº¦æè¡</h3>
+            <ul class="zhui">
+            <script type="text/javascript" src="http://wenjian.jkb.com.cn/search/hits.php?id=433467"></script>
+            </ul>
+        </div>
+        <div class="news-pic-right ad_n122 ad_r">
+        </div>
+    </div>
+</div>
+<div class="footertTop inner clearFix">
+    <h1 class="xglj fl">ç¸å³é¾æ¥</h1>
+    <ul class="xgljRgt fl">
+                <a href="http://www.nhfpc.gov.cn/" target="_blank">å½å®¶å«çå¥åº·å§åä¼</a>
+                <a href="http://www.healthnet.com.cn/" target="_blank">ä¸­å½å¥åº·ç½</a>
+                <a href="http://www.lifetimes.cn/" target="_blank">çå½æ¶æ¥</a>
+                <a href="http://www.99.com.cn/" target="_blank">99å¥åº·ç½</a>
+                <a href="http://health.pclady.com.cn/" target="_blank">å¤ªå¹³æ´å¥³æ§ç½å¥åº·</a>
+                <a href="http://www.hc3i.cn/" target="_blank">ä¸­å½æ°å­å»çç½</a>
+                <a href="http://www.cmt.com.cn/" target="_blank">å»å­¦è®ºåç½</a>
+                <a href="http://www.91huayi.com" target="_blank">åå»ç½</a>
+                <a href="http://www.iiijk.com/" target="_blank">ä¸­åå¥åº·ç½</a>
+                <a href="http://med.sina.com/" target="_blank">æ°æµªå»è¯</a>
+            </ul>
+</div>
+
+<div class="footerInner inner">
+    <div class="footerBtm">
+        <a href='http://www.jkb.com.cn/aboutus/' >å³äºæä»¬</a> | <a href='http://www.jkb.com.cn/aboutus/shengming.html'>ç½ç«å£°æ</a> | <a href='http://www.jkb.com.cn/jkbactivists/'>æ¥ç¤¾æ´»å¨</a> | <a href="http://www.jkb.com.cn/news/industryNews/2010/1208/189350.html" target="_blank">èç³»æä»¬</a> | <a href="http://www.jkb.com.cn/sitemap.html" target="_blank">ç½ç«å°å¾</a> | è¿æ³åä¸è¯ä¿¡æ¯ä¸¾æ¥çµè¯ï¼010-64621663  18811429641
+    </div>
+    <div class="copyright">
+        <p>CopyrightÂ© 1999-2018 å¥åº·æ¥ç¤¾ çæææ è¿èå¿ç©¶</p>
+        <span>äºèç½æ°é»ä¿¡æ¯æå¡è®¸å¯è¯1012006037</span> | <span>å¹¿æ­çµè§èç®å¶ä½ç»è¥è®¸å¯è¯ (äº¬)å­ç¬¬03884å·</span><br>
+        <span>äºèç½åºçè®¸å¯è¯ï¼äº¬ï¼å­283å· </span> | <span>äº¬ICPå¤14006568å·-1</span> | <span>äº¬å¬ç½å®å¤11010102001488å·</span> | <span>å«ç½æ ¸æ»ç¬¬18å·</span>
+   <br/><br/>
+		<a  key ="51d3cdecca8e0b2a8cc15f2e"  logo_size="124x47"  logo_type="business"  href="http://www.anquan.org" ><script src="http://static.anquan.org/static/outer/js/aq_auth.js"></script></a>
+        <br />
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1273014287'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1273014287%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+
+
+<script>
+(function(){
+var bp = document.createElement('script');
+var curProtocol = window.location.protocol.split(':')[0];
+if (curProtocol === 'https') {
+bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+}else {
+bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+}
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+	</div>
+
+    <div class="piaochuang">
+        <div class="pcTop">
+            <h2>ç¹å«æ¨è</h2>
+            <div class="hd">
+                <a class="prev"></a>
+                <a class="next"></a>
+            </div>
+            <div class="bd">
+                <ul class="picList">
+                </ul>
+            </div>
+        </div>
+        <ul class="drawer">
+
+
+        </ul>
+        <div class="lastInfo clearFix">
+            <span class="ewm">
+                <div class="ewmCont">
+                    <img src="/static/index/public/images/ewmjkb.jpg" width="90" height="90" alt="">
+                    <em>å¥åº·æ¥ç½ææºç</em>
+                </div>
+            </span>
+            <span class="backTop"></span>
+        </div>
+
+    </div>
+    <script>
+        $(".pcTop").slide( { titCell:".hd ul",mainCell:".bd ul",autoPage:true,autoPlay:true});
+    </script>
+    
+</div>                  
+
+</body>
+
+<script>
+        initpg();
+    searchpg();
+    // JavaScript Document
+    var share = jiathis_config = {};
+    share.setShare = function(url, title, pic) {
+   url='http://www.jkb.com.cn'+url
+        jiathis_config = {
+            "url": url,
+            "title": title,
+            "pic": pic,
+            "summary":"- jkb.com.cn",
+            "data_track_clickback":true,
+        };
+    }
+
+</script>
+<script>
+    $(".news-left>div:first-child").css("margin-top","0")
+</script>
+<script>
+    adsense('126','ad_n126');
+    adsense('17','ad_n17');
+    adsense('121','ad_n121');
+    adsense('122','ad_n122');
+    function adsense(jsonNum,box) {
+        $.ajax({
+            type: 'post',
+            url: '/static/data/poster_js/json'+jsonNum+'.json',
+            dataType: 'json',
+            success: function(data){
+                if(data.length=='1'){
+                    var str01='<a href="'+data[0].adurl+'" target="_blank">'+data[0].adtype+'</a>';
+                    $('.'+box+'').append(str01);
+                }
+            },
+            error: function(){
+
+            }
+        });
+    }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1396587798855497" charset="utf-8"></script>
+
+</html>      
