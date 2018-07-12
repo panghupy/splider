@@ -1,7 +1,7 @@
 from urllib import request, error
 import ssl
 import re
-from 西次代理.DataTools import tools
+from 西刺代理.DataTools import tools
 
 
 # 把东西写入文件

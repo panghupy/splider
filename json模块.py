@@ -3,7 +3,7 @@ import json
 import requests
 
 # json.load():可以将本地文件中的json字符串转换为python对象,写入到本地文件
-# json.dump():可以将bendipython字符串转换为json对象,并存储
+# json.dump():可以将python字符串转换为json对象,并存储
 # json.loads():可以将json字符串转换为python对象
 # json.dumps():可以将python字符串转换为json对象
 
