@@ -9,7 +9,7 @@ list = [
     {'name': '李', 'age': '30', },
 ]
 
-csvfile = open('134.csv', 'w')
+csvfile = open('134.csv', 'a')
 # csv文件的头
 fieldnames = ['name', 'age']
 writehandler = csv.DictWriter(csvfile, fieldnames)

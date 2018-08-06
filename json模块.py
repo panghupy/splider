@@ -3,9 +3,9 @@ import json
 import requests
 
 # json.load():可以将本地文件中的json字符串转换为python对象,写入到本地文件
-# json.dump():可以将python字符串转换为json对象,并存储
+# json.dump():可以将python对象转换为json字符串,并存储
 # json.loads():可以将json字符串转换为python对象
-# json.dumps():可以将python字符串转换为json对象
+# json.dumps():可以将python对象转换为json字符串
 
 url = 'http://news.baidu.com/widget?id=LocalNews&ajax=json&t=1531118181258'
 

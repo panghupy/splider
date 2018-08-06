@@ -1,4 +1,4 @@
-from urllib import request, error
+from urllib import request, error, parse
 import ssl
 import re
 import os
@@ -84,6 +84,7 @@ def main():
             detail_pattern = re.compile('.*?rid.*?href="(.*?chapter.*?)".*?a>', re.S)
             result = re.findall(detail_pattern, result)
             print((len(result)))
+
 
 if __name__ == '__main__':
     main()
